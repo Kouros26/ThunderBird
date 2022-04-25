@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4281731264155786139}
   - component: {fileID: 4281731264155786138}
   - component: {fileID: 4281731264155786141}
-  - component: {fileID: 4281731264155786140}
+  - component: {fileID: 6768893238381675119}
+  - component: {fileID: 4730819873429566475}
   - component: {fileID: 4281731264155786137}
   m_Layer: 0
   m_Name: UnderPlayer
@@ -98,7 +99,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4281731264155786140
+--- !u!114 &6768893238381675119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,10 +108,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 4281731264155786143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596d9af8b2fb9c34f8eb76c7ff983a7b, type: 3}
+  m_Script: {fileID: 11500000, guid: c36e35dec41734543b15c2d37be72ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerSpeed: 0
+  PlayerSpeed: 10
+--- !u!114 &4730819873429566475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281731264155786143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f20ef06ddc00a4c96d49ab683bf29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4281731264155786137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +151,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4281731264155786140}
+      - m_Target: {fileID: 6768893238381675119}
         m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
         m_MethodName: OnJoystick
         m_Mode: 0
