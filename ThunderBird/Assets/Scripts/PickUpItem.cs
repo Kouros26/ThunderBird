@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PickUpItem : MonoBehaviour
 {
@@ -28,8 +29,6 @@ public class PickUpItem : MonoBehaviour
 
     void Update()
     {
-        if (youCan) Interaction();
-
         // frozen if it is connected to PowerOut
         if (isConnected)
         {
@@ -42,9 +41,9 @@ public class PickUpItem : MonoBehaviour
         }
     }
 
-    void Interaction()
+    public  void Interaction(InputAction.CallbackContext context)
     {
-        if (NearView() && Input.GetKeyDown(KeyCode.E) && !follow)
+        if (NearView() && !follow)
         {
             isConnected = false; // unfrozen
             follow = true;

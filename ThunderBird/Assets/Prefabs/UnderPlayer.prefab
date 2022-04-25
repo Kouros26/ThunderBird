@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4281731264155786138}
   - component: {fileID: 4281731264155786141}
   - component: {fileID: 6768893238381675119}
+  - component: {fileID: 4666653644806184616}
   - component: {fileID: 4730819873429566475}
   - component: {fileID: 4281731264155786137}
   m_Layer: 0
@@ -32,7 +33,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.5133862, y: -2.309517, z: 0.9399385}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6888083120455611882}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -112,6 +114,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerSpeed: 10
+--- !u!114 &4666653644806184616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281731264155786143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8f0388cf114dc4c9737f68ec2254b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OneTime: 0
+  HeroHandsPosition: {fileID: 6888083120455611882}
+  Socket: {fileID: 0}
+  player: {fileID: 4281731264155786143}
 --- !u!114 &4730819873429566475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,8 +183,74 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ee2e5f16-adf1-4ebe-a0d4-ecad089bcbc4
     m_ActionName: Controller/Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4730819873429566475}
+        m_TargetAssemblyTypeName: CharacterInteractions, Assembly-CSharp
+        m_MethodName: OnInteraction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0d0c9b40-ec57-4d58-a16e-2ffba8116c24
+    m_ActionName: Controller/Interaction
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0656b0e6-c851-42cc-a352-04251d3a249e
+    m_ActionName: Controller/SecondaryInteraction
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4666653644806184616}
+        m_TargetAssemblyTypeName: PickUpItem, Assembly-CSharp
+        m_MethodName: Interaction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d91aabc6-4cf1-42dc-9514-25a7b0622230
+    m_ActionName: Controller/PickUp
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Controller
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1 &7109066556535618903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6888083120455611882}
+  m_Layer: 0
+  m_Name: Hands
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6888083120455611882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7109066556535618903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4281731264155786136}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
