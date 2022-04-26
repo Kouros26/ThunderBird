@@ -13,6 +13,10 @@ public class CharacterInteractions : MonoBehaviour
     public bool includeChildren = true;
     bool dragon = false;
 
+    [Header("ResetEngine")]
+    bool Engine1 = false;
+    bool Engine2 = false;
+
     public GameObject player;
     public GameObject playerHands;
     GameObject item;
@@ -40,6 +44,14 @@ public class CharacterInteractions : MonoBehaviour
         if (CharacterMovement.moving)
             interacting = false; interactible = false;
 
+    }
+
+    public void ResetEngine(InputAction.CallbackContext context)
+    {
+        if (Engine1 && Engine2)
+        {
+            print("resetengine Bordelcamarche");
+        }
     }
 
     public void Dragon(InputAction.CallbackContext context)
@@ -95,6 +107,18 @@ public class CharacterInteractions : MonoBehaviour
             dragon = true;
         }
 
+        if (other.tag == "Engine1")
+        {          
+            print("Engine_1");
+            Engine1 = true;
+        }
+
+        if (other.tag == "Engine2")
+        {         
+            print("Engine_2");
+            Engine2 = true;
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -104,9 +128,14 @@ public class CharacterInteractions : MonoBehaviour
             pickable = false;
         }
 
-        if (other.tag == "Dragon")
+        if (other.tag == "Engine1")
         {
-            dragon = false;
+            Engine1 = false;
+        }
+
+        if (other.tag == "Engine2")
+        {
+            Engine2 = false;
         }
 
     }
