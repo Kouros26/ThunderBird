@@ -122,7 +122,7 @@
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Controller",
+                    "groups": "",
                     "action": "PickUp",
                     "isComposite": false,
                     "isPartOfComposite": false
