@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SecondaryInteraction",
+                    "name": "SkillCheck",
                     "type": "Button",
                     "id": "0656b0e6-c851-42cc-a352-04251d3a249e",
                     "expectedControlType": "Button",
@@ -30,9 +30,17 @@
                     "interactions": ""
                 },
                 {
-                    "name": "PickUp",
+                    "name": "WaterRefill",
                     "type": "Button",
-                    "id": "d91aabc6-4cf1-42dc-9514-25a7b0622230",
+                    "id": "e7b01ab2-accc-4d1e-90f3-2612e9f81201",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "KerozenRefill",
+                    "type": "Button",
+                    "id": "85d71455-400b-4418-9d2e-e1c87ba962a0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -178,7 +186,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "SecondaryInteraction",
+                    "action": "SkillCheck",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -189,29 +197,51 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "SecondaryInteraction",
+                    "action": "SkillCheck",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "1325f52d-f4c6-4ac0-9313-ea3d15fbaac3",
-                    "path": "<Gamepad>/buttonEast",
+                    "id": "7905ee6f-87e8-4127-9ea1-13593afe3476",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "PickUp",
+                    "action": "WaterRefill",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "a7f86eda-446d-46e9-b14c-9e71947c212f",
+                    "id": "5bc9b4e2-e10e-4a37-9bcc-0c5a999e358e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "WaterRefill",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc6036c7-686f-43b8-b171-c76d23db8787",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "KerozenRefill",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58470ec7-deee-4d1a-a862-16b74fadbad7",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "PickUp",
+                    "action": "KerozenRefill",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
