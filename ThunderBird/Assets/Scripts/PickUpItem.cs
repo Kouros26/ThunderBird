@@ -49,7 +49,7 @@ public class PickUpItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "pickup")
+        if (other.tag == "pickup")
         {
             pickable = true;
             item = other.gameObject;
