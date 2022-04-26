@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Task
-=======
-  - pickup
->>>>>>> 3ba9adac411804163315945b1b6020a5a30906e0
+  tags: []
   layers:
   - Default
   - TransparentFX
