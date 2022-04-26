@@ -1,25 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CaressTheDragon : MonoBehaviour
 {
-    public GameObject Particle;
-    public GameObject Player;
-    // Start is called before the first frame update
+    public ParticleSystem heart;
+    public bool includeChildren = true;
+    bool dragon = false;
+
     void Start()
     {
-        Debug.Log("JAIDITAMOUR");
-        Particle.SetActive(false);
+        heart.Stop(includeChildren);
+    }
+
+    public void Interaction(InputAction.CallbackContext context)
+    {
+        if (dragon)
+        {
+            heart.Play(includeChildren);
+        }
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter(Collider Joueur)
+    private void OnTriggerEnter(Collider other)
     {
-        if (Joueur.gameObject.tag == "Player")
-        {
-            Debug.Log("JMOUR");
+        if (other.tag == "Finish")
+        {            
+            dragon = true;
+        }
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Finish")
+        {
+            dragon = false;
         }
     }
 }
