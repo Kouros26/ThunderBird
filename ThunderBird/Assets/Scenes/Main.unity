@@ -24025,14 +24025,14 @@ PrefabInstance:
     - target: {fileID: 7897986814121927820, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
       propertyPath: m_PlayerPrefab
       value: 
-      objectReference: {fileID: 4856399006573297021, guid: e32e12b56f859d044aa7c23d590fc546, type: 3}
+      objectReference: {fileID: 5610442977176724045, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
     - target: {fileID: 7897986814121927821, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
       propertyPath: m_Name
       value: Multiplayer Manager
       objectReference: {fileID: 0}
     - target: {fileID: 7897986814121927823, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7897986814121927823, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37569,7 +37569,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1e+10
-  field of view: 64.88772
+  field of view: 58.663673
   orthographic: 0
   orthographic size: 20
   m_Depth: 0
@@ -48158,3 +48158,116 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146804316}
   m_Mesh: {fileID: 8452681322382804519, guid: 04a437424ecc83e4192259ca68df7968, type: 3}
+--- !u!1001 &4691948135049371527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1658527394}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: db786a58ece22224ab6d73c7aad16aea, type: 3}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: ee2e5f16-adf1-4ebe-a0d4-ecad089bcbc4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 0d0c9b40-ec57-4d58-a16e-2ffba8116c24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 0656b0e6-c851-42cc-a352-04251d3a249e
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: e7b01ab2-accc-4d1e-90f3-2612e9f81201
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 85d71455-400b-4418-9d2e-e1c87ba962a0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: Controller/Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: Controller/Interaction[/XInputControllerWindows/buttonSouth,/Mouse/leftButton]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: Controller/SkillCheck[/XInputControllerWindows/buttonWest,/Mouse/rightButton]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: Controller/WaterRefill[/XInputControllerWindows/leftTrigger,/Keyboard/q]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: Controller/KerozenRefill[/XInputControllerWindows/rightTrigger,/Keyboard/e]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.907639
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.319153
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.81299
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086706399543851255, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5610442977176724045, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_Name
+      value: PLAYER
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
