@@ -1,103 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PickUpItem : MonoBehaviour
 {
-    [Tooltip("Feature for one using only")]
-    public bool OneTime = false;
-    [Tooltip("Plug follow this local EmptyObject")]
-    public Transform HeroHandsPosition;
-    [Tooltip("SocketObject with collider(shpere, box etc.) (is trigger = true)")]
-    public Collider Socket; // need Trigger
-
-    // NearView()
-    float distance;
-    float angleView;
-    Vector3 direction;
-
-    bool follow = false, isConnected = false, followFlag = false, youCan = true;
-    Rigidbody rb;
-
     public GameObject player;
+    public GameObject playerHands;
+    GameObject item;
+    bool pickable = false, follow = false, hasObject = false;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (youCan) Interaction();
-
-        // frozen if it is connected to PowerOut
-        if (isConnected)
+        if(follow)
         {
-            gameObject.transform.position = Socket.transform.position;
-            gameObject.transform.rotation = Socket.transform.rotation;
-        }
-        else
-        {
-            return;
+            item.transform.position = playerHands.transform.position;
+            pickable = false;
         }
     }
 
-    void Interaction()
+    public void Interaction(InputAction.CallbackContext context)
     {
-        if (NearView() && Input.GetKeyDown(KeyCode.E) && !follow)
+        if (!hasObject)
         {
-            isConnected = false; // unfrozen
-            follow = true;
-            followFlag = false;
-        }
-
-        if (follow)
-        {
-            rb.drag = 10f;
-            rb.angularDrag = 10f;
-            if (followFlag)
+            if(pickable)
             {
-                distance = Vector3.Distance(transform.position, player.transform.position);
-                if (distance > 3f && Input.GetKeyDown(KeyCode.E))
-                {
-                    follow = false;
-                }
+                item.GetComponent<Rigidbody>().useGravity = false;
+                follow = true;
+                hasObject = true;
             }
-
-            followFlag = true;
-            rb.AddExplosionForce(-1000f, HeroHandsPosition.position, 10f);
-            // second variant of following
-            //gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, objectLerp.position, 1f);
+            else
+            {
+                return;
+            }
         }
         else
         {
-            rb.drag = 0f;
-            rb.angularDrag = .5f;
+            item.GetComponent<Rigidbody>().useGravity = true;
+            follow = false;
+            hasObject = false;
         }
-    }
-
-    bool NearView() // it is true if you near interactive object
-    {
-        distance = Vector3.Distance(transform.position, player.transform.position);
-        //direction = transform.position - Camera.main.transform.position;
-        //angleView = Vector3.Angle(Camera.main.transform.forward, direction);
-
-        if (distance < 10)
-        {
-            print("Near");
-            print(follow);
-            return true;
-        }
-        else return false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other == Socket)
+        if(other.tag == "pickup")
         {
-            isConnected = true;
-            follow = false;
+            pickable = true;
+            item = other.gameObject;
         }
-        if (OneTime) youCan = false;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "pickup")
+        {
+            pickable = false;
+        }
     }
 }
