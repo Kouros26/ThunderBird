@@ -8,6 +8,11 @@ public class CharacterInteractions : MonoBehaviour
     public static bool interacting;
     [SerializeField] private bool interactible;
 
+    [Header ("Dragon")]
+    public ParticleSystem heart;
+    public bool includeChildren = true;
+    bool dragon = false;
+
     public GameObject player;
     public GameObject playerHands;
     GameObject item;
@@ -16,7 +21,7 @@ public class CharacterInteractions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        heart.Stop(includeChildren);
     }
 
     void FixedUpdate()
@@ -35,6 +40,14 @@ public class CharacterInteractions : MonoBehaviour
         if (CharacterMovement.moving)
             interacting = false; interactible = false;
 
+    }
+
+    public void Dragon(InputAction.CallbackContext context)
+    {
+        if (dragon)
+        {
+            heart.Play(includeChildren);
+        }
     }
 
     public void OnInteraction(InputAction.CallbackContext context)
@@ -76,6 +89,12 @@ public class CharacterInteractions : MonoBehaviour
             pickable = true;
             item = other.gameObject;
         }
+
+        if (other.tag == "Dragon")
+        {
+            dragon = true;
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -84,5 +103,11 @@ public class CharacterInteractions : MonoBehaviour
         {
             pickable = false;
         }
+
+        if (other.tag == "Dragon")
+        {
+            dragon = false;
+        }
+
     }
 }

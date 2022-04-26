@@ -25,7 +25,7 @@ public class CaressTheDragon : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Finish")
+        if (other.tag == "Dragon")
         {            
             dragon = true;
         }
@@ -33,7 +33,7 @@ public class CaressTheDragon : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Finish")
+        if (other.tag == "Dragon")
         {
             dragon = false;
         }
