@@ -9,11 +9,13 @@ public class CharacterMovement : MonoBehaviour
     private Vector2 movementDir;
     public static Transform pos;
     public static bool moving;
+    Animator playerAnimations;
 
     // Start is called before the first frame update
     void Start()
     {
         pos = transform;
+        playerAnimations = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void OnJoystick(InputAction.CallbackContext context)
     {
+        playerAnimations.SetBool("Move", true);
         movementDir = context.ReadValue<Vector2>();
         moving = true;
         OnJoystickLeft(movementDir);
@@ -32,6 +35,7 @@ public class CharacterMovement : MonoBehaviour
     public void OnJoystickLeft(Vector2 vec)
     {
         if (vec == Vector2.zero)
+            playerAnimations.SetBool("Move", false);
             moving = false;
     }
 }

@@ -2680,6 +2680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 250983746}
+  - component: {fileID: 250983747}
   m_Layer: 0
   m_Name: Porte_coulissante_d 1
   m_TagString: Untagged
@@ -2701,6 +2702,25 @@ Transform:
   m_Father: {fileID: 72691514}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &250983747
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250983745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 299edddb8dcc9254fb100ba7a7b82cf3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &253555357
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,7 +6045,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: -3194826189641995282, guid: 04a437424ecc83e4192259ca68df7968, type: 3}
 --- !u!1 &588795596
 GameObject:
@@ -14198,6 +14218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1703371437}
+  - component: {fileID: 1703371438}
   m_Layer: 0
   m_Name: Porte_coulissante_g
   m_TagString: Untagged
@@ -14221,6 +14242,25 @@ Transform:
   m_Father: {fileID: 1043525013}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1703371438
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703371436}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedd64960f13f1f4ea41c2e1cb377991, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1707002731
 GameObject:
   m_ObjectHideFlags: 0
@@ -31497,6 +31537,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.88
       objectReference: {fileID: 0}
+    - target: {fileID: 4359338184761741258, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4388513416472865064, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.98635757
@@ -31524,6 +31568,18 @@ PrefabInstance:
     - target: {fileID: 4388513416472865064, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -94.535194
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947608, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947608, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691948135670947608, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4691948135670947623, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
       propertyPath: m_Camera
@@ -43899,6 +43955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8147165894943915060}
+  - component: {fileID: 9170023760819068347}
   m_Layer: 0
   m_Name: Porte_coulissante_g1
   m_TagString: Untagged
@@ -43906,6 +43963,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &9170023760819068347
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9170023760819068346}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedd64960f13f1f4ea41c2e1cb377991, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9178277405627042958
 GameObject:
   m_ObjectHideFlags: 0
