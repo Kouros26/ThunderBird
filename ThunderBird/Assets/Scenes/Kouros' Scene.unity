@@ -609,22 +609,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7897986814121927820, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
-      propertyPath: m_SplitScreen
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7897986814121927820, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
-      propertyPath: m_PlayerPrefab
+    - target: {fileID: 1383350240, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
+      propertyPath: spawnLocations.Array.data[0]
       value: 
-      objectReference: {fileID: 5610442977176724045, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
-    - target: {fileID: 7897986814121927820, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
-      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      objectReference: {fileID: 2131680158}
+    - target: {fileID: 1383350240, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
+      propertyPath: spawnLocations.Array.data[1]
       value: 
-      objectReference: {fileID: 1383350240}
-    - target: {fileID: 7897986814121927820, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
-      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPLayerJoined
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2131680157}
     - target: {fileID: 7897986814121927821, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
       propertyPath: m_Name
       value: Multiplayer Manager
@@ -769,29 +761,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143643571}
   m_CullTransparentMesh: 1
---- !u!1 &1383350239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7897986814121927821, guid: bb4c3e52068526648a25f7a412097fee, type: 3}
-  m_PrefabInstance: {fileID: 1132079694}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1383350240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383350239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1fde48d64b7246408fbe687c38e2cf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnLocations:
-  - {fileID: 2131680158}
-  - {fileID: 2131680157}
-  players:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1590063940
 GameObject:
   m_ObjectHideFlags: 0
