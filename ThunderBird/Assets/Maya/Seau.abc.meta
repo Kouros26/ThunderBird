@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 80c6e0044dc3645488e6d2fbe4b00342
+guid: 3a59ee425a5bc3a428bc8af1de6aa77b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -8,8 +8,8 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: f53f5fc499d31e44b9deee84d28a9ee8, type: 3}
-  rootGameObjectId: 
-  rootGameObjectName: 
+  rootGameObjectId: Seau(1)
+  rootGameObjectName: Seau(1)
   streamSettings:
     normals: 1
     tangents: 1

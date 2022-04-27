@@ -3778,9 +3778,10 @@ GameObject:
   - component: {fileID: 287059384}
   - component: {fileID: 287059383}
   - component: {fileID: 287059385}
+  - component: {fileID: 287059386}
   m_Layer: 0
   m_Name: pCube5
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3862,6 +3863,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3758573805739257388, guid: 04a437424ecc83e4192259ca68df7968, type: 3}
+--- !u!65 &287059386
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287059381}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 150, y: 100, z: 150}
+  m_Center: {x: 0.000091552734, y: -0.00004196167, z: 0}
 --- !u!1 &291461109
 GameObject:
   m_ObjectHideFlags: 0
