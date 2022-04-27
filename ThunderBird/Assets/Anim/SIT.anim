@@ -13,7 +13,196 @@ AnimationClip:
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
   m_CompressedRotationCurves: []
-  m_EulerCurves: []
+  m_EulerCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 1.118, y: 2.916, z: -108.367}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg/Rig_controleur_ref_01:QuickRigCharacter_LeftLeg
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -2.345, y: 4.201, z: -86.178}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 1.66, y: 3.05, z: -108.324}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg/Rig_controleur_ref_01:QuickRigCharacter_RightLeg
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 2.284, y: -4.762, z: 93.796}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -3.247, y: 88.257, z: 47.835}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -3.247, y: 88.256, z: 47.837}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 1.164, y: -0.175, z: -18.261}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm/Rig_controleur_ref_01:QuickRigCharacter_LeftForeArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 1.164, y: -0.175, z: -18.265}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm/Rig_controleur_ref_01:QuickRigCharacter_RightForeArm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1.8333334
+        value: {x: -0.994, y: -14.968, z: 0.131}
+        inSlope: {x: -0.48025, y: -7.486, z: 0.1285}
+        outSlope: {x: -0.48025, y: -7.486, z: 0.1285}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 4
+        value: {x: -1.921, y: -29.944, z: 0.514}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 6
+        value: {x: 0.994, y: 14.968, z: 0.131}
+        inSlope: {x: 0.6162882, y: 9.953685, z: 0}
+        outSlope: {x: 0.6162882, y: 9.953685, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 10.016666
+        value: {x: 1.921, y: 29.944, z: 0.514}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 13
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
@@ -24,14 +213,77 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 829339347
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1152171297
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 376969734
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3926698011
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 564157473
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1815236613
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2941124076
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3023169013
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3818694921
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 13
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -46,8 +298,926 @@ AnimationClip:
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 0
     m_Mirror: 0
-  m_EditorCurves: []
-  m_EulerEditorCurves: []
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.118
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg/Rig_controleur_ref_01:QuickRigCharacter_LeftLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 2.916
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg/Rig_controleur_ref_01:QuickRigCharacter_LeftLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -108.367
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg/Rig_controleur_ref_01:QuickRigCharacter_LeftLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -2.345
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 4.201
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -86.178
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.66
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg/Rig_controleur_ref_01:QuickRigCharacter_RightLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 3.05
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg/Rig_controleur_ref_01:QuickRigCharacter_RightLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -108.324
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg/Rig_controleur_ref_01:QuickRigCharacter_RightLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 2.284
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -4.762
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 93.796
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -3.247
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 88.257
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 47.835
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -3.247
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 88.256
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 47.837
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.164
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm/Rig_controleur_ref_01:QuickRigCharacter_LeftForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.175
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm/Rig_controleur_ref_01:QuickRigCharacter_LeftForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -18.261
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm/Rig_controleur_ref_01:QuickRigCharacter_LeftForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.164
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm/Rig_controleur_ref_01:QuickRigCharacter_RightForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.175
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm/Rig_controleur_ref_01:QuickRigCharacter_RightForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -18.265
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm/Rig_controleur_ref_01:QuickRigCharacter_RightForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.8333334
+        value: -0.994
+        inSlope: -0.48025
+        outSlope: -0.48025
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4
+        value: -1.921
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6
+        value: 0.994
+        inSlope: 0.6162882
+        outSlope: 0.6162882
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.016666
+        value: 1.921
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.8333334
+        value: -14.968
+        inSlope: -7.486
+        outSlope: -7.486
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4
+        value: -29.944
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6
+        value: 14.968
+        inSlope: 9.953685
+        outSlope: 9.953685
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.016666
+        value: 29.944
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.8333334
+        value: 0.131
+        inSlope: 0.1285
+        outSlope: 0.1285
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4
+        value: 0.514
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6
+        value: 0.131
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10.016666
+        value: 0.514
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg/Rig_controleur_ref_01:QuickRigCharacter_LeftLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg/Rig_controleur_ref_01:QuickRigCharacter_LeftLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg/Rig_controleur_ref_01:QuickRigCharacter_LeftLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_LeftUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg/Rig_controleur_ref_01:QuickRigCharacter_RightLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg/Rig_controleur_ref_01:QuickRigCharacter_RightLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg/Rig_controleur_ref_01:QuickRigCharacter_RightLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_RightUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm/Rig_controleur_ref_01:QuickRigCharacter_LeftForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm/Rig_controleur_ref_01:QuickRigCharacter_LeftForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_LeftShoulder/Rig_controleur_ref_01:QuickRigCharacter_LeftArm/Rig_controleur_ref_01:QuickRigCharacter_LeftForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm/Rig_controleur_ref_01:QuickRigCharacter_RightForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm/Rig_controleur_ref_01:QuickRigCharacter_RightForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1/Rig_controleur_ref_01:QuickRigCharacter_Spine2/Rig_controleur_ref_01:QuickRigCharacter_RightShoulder/Rig_controleur_ref_01:QuickRigCharacter_RightArm/Rig_controleur_ref_01:QuickRigCharacter_RightForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Rig_controleur_ref_01:QuickRigCharacter_Reference/Rig_controleur_ref_01:QuickRigCharacter_Hips/Rig_controleur_ref_01:QuickRigCharacter_Spine/Rig_controleur_ref_01:QuickRigCharacter_Spine1
+    classID: 4
+    script: {fileID: 0}
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []

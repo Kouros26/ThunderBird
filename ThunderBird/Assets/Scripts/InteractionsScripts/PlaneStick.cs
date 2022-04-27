@@ -9,7 +9,7 @@ public class PlaneStick : MonoBehaviour
     public static float AltitudeMax = Altitude;
 
     private float x, y;
-    // Start is called before the first frame update
+
     void Start()
     {
         
@@ -20,7 +20,7 @@ public class PlaneStick : MonoBehaviour
     {
         x += 0.003f;
 
-        if (CharacterInteractions.interacting)
+        if (EventScript.isOccupied)
         {
             x = 0;
             y += 0.005f;

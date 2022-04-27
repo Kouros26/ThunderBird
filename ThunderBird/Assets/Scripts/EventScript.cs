@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class EventScript : MonoBehaviour
 {
-    private GameObject Cockpit1;
-    private GameObject Cockpit2;
-    private GameObject PopUpCockpit;
+    private static GameObject Cockpit1;
+    private static GameObject Cockpit2;
+    private static GameObject PopUpCockpit;
 
-    private GameObject Switch;
-    private GameObject PopUpSwitch;
+    private static GameObject Switch;
+    private static GameObject PopUpSwitch;
 
-    private GameObject Engine;
-    private GameObject PopUpFuel;
-    private GameObject PopUpFire;
+    private static GameObject Engine;
+    private static GameObject PopUpFuel;
+    private static GameObject PopUpFire;
 
-    //public bool engineactif;
+    public static bool isOccupied = false;
+    //public Transform reset;
 
     private void Start()
     {
@@ -30,29 +31,26 @@ public class EventScript : MonoBehaviour
         PopUpSwitch = GameObject.Find("PopUpSwitch");
     }
 
-    //Pour check si le script marche
-   /* public void Update()
+    #region CockpitMission
+    public static void CockpitMission()
     {
-        if (engineactif == true)
+        if(!isOccupied)
         {
-            CockpitMission();
+            //this.gameObject.transform.position = reset.transform.position;
+            PopUpCockpit.SetActive(true);
+            Cockpit1.GetComponent<BoxCollider>().enabled = true;
+            Cockpit2.GetComponent<BoxCollider>().enabled = false;
         }
-        else
+        else if(isOccupied)
         {
-            CockpitMissionOff();
+            PopUpCockpit.SetActive(false);
+            Cockpit1.GetComponent<BoxCollider>().enabled = false;
+            Cockpit2.GetComponent<BoxCollider>().enabled = true;
         }
-    }*/
+    }
+    #endregion
 
-    public void CockpitMission()
-    {
-        PopUpCockpit.SetActive(true);
-        Cockpit1.GetComponent<BoxCollider>().enabled = true;
-    }
-    public void CockpitMissionOff()
-    {
-        PopUpCockpit.SetActive(false);
-        Cockpit1.GetComponent<BoxCollider>().enabled = false;
-    }
+
 
     public void FuelMission()
     {
