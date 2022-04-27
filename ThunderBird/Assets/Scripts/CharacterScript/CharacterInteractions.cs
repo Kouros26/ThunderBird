@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class CharacterInteractions : MonoBehaviour
 {
     public static bool interacting;
-    [SerializeField] private bool interactible;
+    [SerializeField] private bool interactible = HandHitbox.interactible;
 
     [Header ("Dragon")]
     public ParticleSystem heart;
@@ -30,19 +30,18 @@ public class CharacterInteractions : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (follow)
-        {
-            item.transform.position = playerHands.transform.position;
-            pickable = false;
-        }
+        if (!follow) return;
+        item.transform.position = playerHands.transform.position;
+        pickable = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Setup();
         if (!interacting) return;
         if (CharacterMovement.moving)
-            interacting = false; interactible = false;
+            interacting = false; HandHitbox.interactible = false;
 
     }
 
@@ -65,10 +64,10 @@ public class CharacterInteractions : MonoBehaviour
     public void OnInteraction(InputAction.CallbackContext context)
     {
         bool temp = context.performed;
-        
+
         if (temp && interactible)
         {
-            interacting = true; 
+            interacting = true;
             return;
         }
 
@@ -90,53 +89,13 @@ public class CharacterInteractions : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter(Collision collision)
+    private void Setup()
     {
-        interactible = collision.gameObject.tag == "Interactible" ? true : false;
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "pickup")
-        {
-            pickable = true;
-            item = other.gameObject;
-        }
-
-        if (other.tag == "Dragon")
-        {
-            dragon = true;
-        }
-
-        if (other.tag == "Engine1")
-        {          
-            print("Engine_1");
-            Engine1 = true;
-        }
-
-        if (other.tag == "Engine2")
-        {         
-            print("Engine_2");
-            Engine2 = true;
-        }
-
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "pickup")
-        {
-            pickable = false;
-        }
-
-        if (other.tag == "Engine1")
-        {
-            Engine1 = false;
-        }
-
-        if (other.tag == "Engine2")
-        {
-            Engine2 = false;
-        }
-
+        interactible = HandHitbox.interactible;
+        pickable = HandHitbox.pickable;
+        item = HandHitbox.item;
+        Engine1 = HandHitbox.Engine1;
+        Engine2 = HandHitbox.Engine2;
+        dragon = HandHitbox.dragon;
     }
 }

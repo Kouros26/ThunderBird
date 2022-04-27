@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7897986814121927823}
   - component: {fileID: 7897986814121927820}
-  - component: {fileID: 7897986814121927822}
   m_Layer: 0
   m_Name: Multiplayer Manager
   m_TagString: Untagged
@@ -51,7 +50,7 @@ MonoBehaviour:
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7897986814121927822}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Spawning, Assembly-CSharp
         m_MethodName: OnPLayerJoined
         m_Mode: 0
@@ -87,18 +86,3 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
---- !u!114 &7897986814121927822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7897986814121927821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1fde48d64b7246408fbe687c38e2cf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnLocations:
-  - {fileID: 0}
-  - {fileID: 0}
