@@ -9,9 +9,9 @@ public class CharacterInteractions : MonoBehaviour
     [SerializeField] private bool interactible = HandHitbox.interactible;
 
     [Header ("Dragon")]
-    public ParticleSystem heart;
+    public ParticleSystem particles;
     public bool includeChildren = true;
-    bool dragon = false;
+    bool dragon = false, love = false;
 
     [Header("ResetEngine")]
     bool Engine1 = false;
@@ -25,7 +25,7 @@ public class CharacterInteractions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        heart.Stop(includeChildren);
+        particles.Stop(includeChildren);
     }
 
     void FixedUpdate()
@@ -57,7 +57,15 @@ public class CharacterInteractions : MonoBehaviour
     {
         if (dragon)
         {
-            heart.Play(includeChildren);
+            Debug.Log("Clique!!!!!!");
+            particles.Play();
+
+            love = true;
+
+        }
+        else
+        {
+            love = false;
         }
     }
 

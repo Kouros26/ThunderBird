@@ -24,43 +24,43 @@ public class PickUpItem : MonoBehaviour
         }
     }
 
-    public void Interaction(InputAction.CallbackContext context)
-    {
-        if (!hasObject)
-        {
-            if(pickable)
-            {
-                item.GetComponent<Rigidbody>().useGravity = false;
-                follow = true;
-                hasObject = true;
-            }
-            else
-            {
-                return;
-            }
-        }
-        else
-        {
-            item.GetComponent<Rigidbody>().useGravity = true;
-            follow = false;
-            hasObject = false;
-        }
-    }
+    //public void Interaction(InputAction.CallbackContext context)
+    //{
+    //    if (!hasObject)
+    //    {
+    //        if(pickable)
+    //        {
+    //            item.GetComponent<Rigidbody>().useGravity = false;
+    //            follow = true;
+    //            hasObject = true;
+    //        }
+    //        else
+    //        {
+    //            return;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        item.GetComponent<Rigidbody>().useGravity = true;
+    //        follow = false;
+    //        hasObject = false;
+    //    }
+    //}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "pickup")
-        {
-            pickable = true;
-            item = other.gameObject;
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag == "pickup")
+    //    {
+    //        pickable = true;
+    //        item = other.gameObject;
+    //    }
+    //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "pickup")
-        {
-            pickable = false;
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.tag == "pickup")
+    //    {
+    //        pickable = false;
+    //    }
+    //}
 }

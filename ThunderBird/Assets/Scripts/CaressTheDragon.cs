@@ -7,35 +7,41 @@ public class CaressTheDragon : MonoBehaviour
 {
     public ParticleSystem heart;
     public bool includeChildren = true;
-    bool dragon = false;
+    bool dragon = false, love = false;
 
     void Start()
     {
-        heart.Stop(includeChildren);
+
     }
 
-    public void Interaction(InputAction.CallbackContext context)
-    {
-        if (dragon)
-        {
-            heart.Play(includeChildren);
-        }
-    }
+    //void FixedUpdate()
 
-    // Update is called once per frame
+    //{
+    //    if (love)
+    //    {
+    //        heart.Play(includeChildren);
+    //    }
+    //}
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Dragon")
-        {            
-            dragon = true;
+        if (other.tag == "Player")
+        {
+            if (love)
+        {
+                Debug.Log("LOVEACTIVITED");
+            heart.Play(includeChildren);
+        }
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Dragon")
+        if (other.tag == "Player")
         {
-            dragon = false;
+            heart.Stop(includeChildren);
         }
     }
+
 }

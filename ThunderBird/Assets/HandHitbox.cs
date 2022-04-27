@@ -5,6 +5,7 @@ using UnityEngine;
 public class HandHitbox : MonoBehaviour
 {
     public static GameObject item;
+    public static GameObject heart;
 
     public static bool interactible;
     public static bool pickable = false, follow = false, hasObject = false;
@@ -23,22 +24,21 @@ public class HandHitbox : MonoBehaviour
                 break;
 
             case "pickup":
-                Debug.Log("Test");
                 pickable = true;
                 item = other.gameObject;
                 break;
 
             case "Dragon":
+                              Debug.Log("in");
                 dragon = true;
+                heart = other.gameObject;
                 break;
 
             case "Engine1":
-                print("Engine_1");
                 Engine1 = true;
                 break;
 
             case "Engine2":
-                print("Engine_2");
                 Engine2 = true;
                 break;
 
@@ -62,6 +62,12 @@ public class HandHitbox : MonoBehaviour
 
             case "Engine2":
                 Engine2 = false;
+                break;
+
+            case "Dragon":
+                Debug.Log("out");
+
+                dragon = false;
                 break;
 
             case "Door":
