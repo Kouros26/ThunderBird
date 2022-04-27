@@ -3207,6 +3207,7 @@ GameObject:
   - component: {fileID: 6375943511010962305}
   - component: {fileID: 342074499380177042}
   - component: {fileID: 9109800051141598578}
+  - component: {fileID: 3491129645976537322}
   m_Layer: 0
   m_Name: PILOT
   m_TagString: Player
@@ -3480,6 +3481,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 410da436676efbc4e82d8ff067ffba08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3491129645976537322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610442977176724045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53b901bd27f8e341b93d1fc659ef7b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart: {fileID: 1025553884536577588, guid: 1bb49ecc826e64f47b1d29fbcaabf603, type: 3}
+  includeChildren: 1
 --- !u!1 &5658877251104730583
 GameObject:
   m_ObjectHideFlags: 0
