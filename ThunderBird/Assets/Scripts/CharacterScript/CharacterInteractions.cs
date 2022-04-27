@@ -9,13 +9,19 @@ public class CharacterInteractions : MonoBehaviour
     [SerializeField] private bool interactible = HandHitbox.interactible;
 
     [Header ("Dragon")]
-    public ParticleSystem particles;
+    ParticleSystem particles;
     public bool includeChildren = true;
     bool dragon = false, love = false;
 
     [Header("ResetEngine")]
     bool Engine1 = false;
     bool Engine2 = false;
+
+    [Header("Water&Fuel")]
+    bool water = false, fuel = false, emptybucket = false, followWater = false;
+    GameObject BucketEmpty;
+    GameObject BucketWater;
+    GameObject BucketFuel;
 
     public GameObject player;
     public GameObject playerHands;
@@ -33,6 +39,9 @@ public class CharacterInteractions : MonoBehaviour
         if (!follow) return;
         item.transform.position = playerHands.transform.position;
         pickable = false;
+        if (!followWater) return;
+        BucketWater.transform.position = playerHands.transform.position;
+        water = false;
     }
 
     // Update is called once per frame
@@ -58,18 +67,75 @@ public class CharacterInteractions : MonoBehaviour
         if (dragon)
         {
             Debug.Log("Clique!!!!!!");
-            particles.Play();
+            particles.Stop(includeChildren);
 
             love = true;
-
         }
         else
         {
+            particles.Stop(includeChildren);
+
             love = false;
         }
     }
 
     public void OnInteraction(InputAction.CallbackContext context)
+    {
+        bool temp = context.performed;
+
+        if (temp && interactible)
+        {
+            interacting = true;
+            return;
+        }
+
+        if (!hasObject)
+        {
+            if (pickable)
+            {
+                item.GetComponent<Rigidbody>().useGravity = false;
+                follow = true;
+                hasObject = true;
+            }
+        }
+
+        else
+        {
+            item.GetComponent<Rigidbody>().useGravity = true;
+            follow = false;
+            hasObject = false;
+        }
+    }
+
+    public void Water(InputAction.CallbackContext context)
+    {
+        bool temp = context.performed;
+
+        if (temp && interactible)
+        {
+            interacting = true;
+            return;
+        }
+
+        if (!hasObject)
+        {
+            if (water)
+            {
+                BucketWater.GetComponent<Rigidbody>().useGravity = false;
+                followWater = true;
+                hasObject = true;
+            }
+        }
+
+        else
+        {
+            BucketWater.GetComponent<Rigidbody>().useGravity = true;
+            followWater = false;
+            hasObject = false;
+        }
+    }
+
+    public void Fuel(InputAction.CallbackContext context)
     {
         bool temp = context.performed;
 
@@ -105,5 +171,12 @@ public class CharacterInteractions : MonoBehaviour
         Engine1 = HandHitbox.Engine1;
         Engine2 = HandHitbox.Engine2;
         dragon = HandHitbox.dragon;
+        water = HandHitbox.water;
+        fuel = HandHitbox.fuel;
+        emptybucket = HandHitbox.emptybucket;
+        BucketWater = HandHitbox.BucketWater;
+        BucketFuel = HandHitbox.BucketFuel;
+        BucketEmpty = HandHitbox.BucketEmpty;
+
     }
 }

@@ -5,13 +5,19 @@ using UnityEngine;
 public class HandHitbox : MonoBehaviour
 {
     public static GameObject item;
-    public static GameObject heart;
+    public static GameObject BucketWater;
+    public static GameObject BucketFuel;
+    public static GameObject BucketEmpty;
 
     public static bool interactible;
     public static bool pickable = false, follow = false, hasObject = false;
     public static bool dragon = false;
     public static bool Engine1 = false;
     public static bool Engine2 = false;
+    public static bool water = false;
+    public static bool fuel = false;
+    public static bool emptybucket;
+
     public bool OnDoor;
     public bool includeChildren = true;
 
@@ -19,6 +25,21 @@ public class HandHitbox : MonoBehaviour
     {
         switch (other.tag)
         {
+            case "EmptyBucket":
+                emptybucket = true;
+                BucketEmpty = other.gameObject;
+                break;
+
+            case "Fuel":
+                fuel = true;
+                BucketFuel = other.gameObject;
+                break;
+
+            case "Water":
+                water = true;
+                BucketWater = other.gameObject;
+                break;
+
             case "Interactible":
                 interactible = true;
                 break;
@@ -31,7 +52,6 @@ public class HandHitbox : MonoBehaviour
             case "Dragon":
                               Debug.Log("in");
                 dragon = true;
-                heart = other.gameObject;
                 break;
 
             case "Engine1":
@@ -52,6 +72,18 @@ public class HandHitbox : MonoBehaviour
     {
         switch (other.tag)
         {
+            case "EmptyBucket":
+                emptybucket = false;
+                break;
+
+            case "Fuel":
+                fuel = false;
+                break;
+
+            case "Water":
+                water = false;
+                break;
+
             case "pickup":
                 pickable = false;
                 break;
