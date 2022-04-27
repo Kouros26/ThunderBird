@@ -16,7 +16,8 @@ public class HandHitbox : MonoBehaviour
     public static bool Engine2 = false;
     public static bool water = false;
     public static bool fuel = false;
-    public static bool emptybucket;
+    public static bool emptybucket = false;
+    public static bool fuelpumps = false;
 
     public bool OnDoor;
     public bool includeChildren = true;
@@ -25,6 +26,10 @@ public class HandHitbox : MonoBehaviour
     {
         switch (other.tag)
         {
+            case "Pumps":
+                fuelpumps = true;
+                break;
+
             case "EmptyBucket":
                 emptybucket = true;
                 BucketEmpty = other.gameObject;
@@ -72,6 +77,10 @@ public class HandHitbox : MonoBehaviour
     {
         switch (other.tag)
         {
+            case "Pumps":
+                fuelpumps = false;
+                break;
+
             case "EmptyBucket":
                 emptybucket = false;
                 break;

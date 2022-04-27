@@ -18,15 +18,17 @@ public class CharacterInteractions : MonoBehaviour
     bool Engine2 = false;
 
     [Header("Water&Fuel")]
-    bool water = false, fuel = false, emptybucket = false, followWater = false;
-    GameObject BucketEmpty;
+    bool water = false, fuel = false, emptybucket = false, followWater = false, fuelpumps = false;
     GameObject BucketWater;
     GameObject BucketFuel;
+    GameObject BucketEmpty;
+    public bool hasObjectWater = false, hasObjectFuel = false;
 
     public GameObject player;
     public GameObject playerHands;
     GameObject item;
-    bool pickable = false, follow = false, hasObject = false;
+    bool pickable = false, follow = false;
+        public bool hasObject = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,9 +41,11 @@ public class CharacterInteractions : MonoBehaviour
         if (!follow) return;
         item.transform.position = playerHands.transform.position;
         pickable = false;
+
         if (!followWater) return;
         BucketWater.transform.position = playerHands.transform.position;
         water = false;
+
     }
 
     // Update is called once per frame
@@ -67,7 +71,7 @@ public class CharacterInteractions : MonoBehaviour
         if (dragon)
         {
             Debug.Log("Clique!!!!!!");
-            particles.Stop(includeChildren);
+            particles.Play(includeChildren);
 
             love = true;
         }
@@ -109,21 +113,15 @@ public class CharacterInteractions : MonoBehaviour
 
     public void Water(InputAction.CallbackContext context)
     {
-        bool temp = context.performed;
 
-        if (temp && interactible)
-        {
-            interacting = true;
-            return;
-        }
-
-        if (!hasObject)
+        if (!hasObject && !hasObjectWater)
         {
             if (water)
             {
                 BucketWater.GetComponent<Rigidbody>().useGravity = false;
                 followWater = true;
                 hasObject = true;
+                hasObjectWater = true;
             }
         }
 
@@ -132,6 +130,7 @@ public class CharacterInteractions : MonoBehaviour
             BucketWater.GetComponent<Rigidbody>().useGravity = true;
             followWater = false;
             hasObject = false;
+            hasObjectWater = false;
         }
     }
 
@@ -163,6 +162,25 @@ public class CharacterInteractions : MonoBehaviour
         }
     }
 
+    public void HasObjectEmptyToWater(InputAction.CallbackContext context)
+    {
+        if (hasObject && fuelpumps)
+        {
+            Debug.Log("L'eau c'est la vie meme dans un sceau");
+            hasObjectWater = true;
+            hasObjectFuel = false;
+        }
+    }
+    public void HasObjectEmptyToFuel(InputAction.CallbackContext context)
+    {
+        if (hasObject && fuelpumps)
+        {
+            Debug.Log("Du fuel dans le malibu et dans le sceau");
+            hasObjectWater = false;
+            hasObjectFuel = true;
+        }
+    }
+
     private void Setup()
     {
         interactible = HandHitbox.interactible;
@@ -177,6 +195,6 @@ public class CharacterInteractions : MonoBehaviour
         BucketWater = HandHitbox.BucketWater;
         BucketFuel = HandHitbox.BucketFuel;
         BucketEmpty = HandHitbox.BucketEmpty;
-
+        fuelpumps = HandHitbox.fuelpumps;
     }
 }

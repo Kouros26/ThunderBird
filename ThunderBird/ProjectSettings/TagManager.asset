@@ -12,6 +12,7 @@ TagManager:
   - Door
   - Water
   - QTE
+  - Pumps
   layers:
   - Default
   - TransparentFX
