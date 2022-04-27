@@ -14,7 +14,7 @@ public class CharacterMovement : MonoBehaviour
     private Vector2 movementDir;
     public static Transform pos;
     public static bool moving;
-    Animator playerAnimations;
+    public Animator playerAnimations;
 
     // Start is called before the first frame update
     void Start()

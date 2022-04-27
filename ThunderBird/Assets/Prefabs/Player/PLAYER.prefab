@@ -1664,7 +1664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4691948134359711381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.028, y: 0.997, z: 0.622}
+  m_LocalPosition: {x: -0.028, y: 0.997, z: 0.8}
   m_LocalScale: {x: 1, y: 1.7656, z: 0.4471}
   m_Children: []
   m_Father: {fileID: 5086706399543851255}
@@ -2456,6 +2456,7 @@ MonoBehaviour:
   controller: {fileID: 342074499380177042}
   PlayerSpeed: 15
   turnSmoothTime: 0.1
+  playerAnimations: {fileID: 4691948135670947610}
 --- !u!114 &6375943511010962305
 MonoBehaviour:
   m_ObjectHideFlags: 0
