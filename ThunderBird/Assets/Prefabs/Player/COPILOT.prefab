@@ -999,7 +999,7 @@ MonoBehaviour:
   playerAnimations: {fileID: 82040573282494183}
   paused: 0
   checkForMove: 0
-  eventScript: {fileID: 0}
+  eventScript: {fileID: 4490880951046661263}
 --- !u!114 &1749002322523378300
 MonoBehaviour:
   m_ObjectHideFlags: 0
