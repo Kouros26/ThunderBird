@@ -29,6 +29,6 @@ public class Altimeter : MonoBehaviour
 
         _text.color = _color;
 
-        _text.text = "Altitude : " + PlaneStick.Altitude + "m";
+        _text.text = PlaneStick.Altitude + "m";
     }
 }

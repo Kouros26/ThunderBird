@@ -9,6 +9,7 @@ public class Cockpit : MonoBehaviour
     public Transform coPilot;
     public Transform coPilotView;
     public CharacterMovement characterMovementScript;
+    //public SkillCheck skillCheckScript;
     Transform player;
 
     Animator playerAnim;
@@ -24,6 +25,7 @@ public class Cockpit : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            //skillCheckScript.SkillCheckStart();
             EventScript.isOccupied = true;
             player = other.GetComponent<Transform>();
             player.transform.position = pilot.transform.position;

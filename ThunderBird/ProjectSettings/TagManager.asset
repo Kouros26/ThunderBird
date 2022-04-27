@@ -11,6 +11,7 @@ TagManager:
   - Interactible
   - Door
   - Water
+  - QTE
   layers:
   - Default
   - TransparentFX

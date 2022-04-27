@@ -79,7 +79,7 @@ public class CharacterMovement : MonoBehaviour
 
     IEnumerator WaitForReset()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(15);
         EventScript.CockpitMission();
     }
 }

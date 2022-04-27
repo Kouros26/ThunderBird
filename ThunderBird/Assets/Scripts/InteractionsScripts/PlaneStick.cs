@@ -18,13 +18,14 @@ public class PlaneStick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        x += 0.003f;
+        x += 0.01f;
 
         if (EventScript.isOccupied)
         {
             x = 0;
-            y += 0.005f;
+            y += 0.05f;
             Altitude += y * y * Time.deltaTime;
+            Altitude = Mathf.RoundToInt(Altitude);
 
             if (Altitude >= AltitudeMax)
                 Altitude = AltitudeMax;
@@ -34,6 +35,7 @@ public class PlaneStick : MonoBehaviour
 
         y = 0;
         Altitude -= x * x * Time.deltaTime;
+        Altitude = Mathf.RoundToInt(Altitude);
 
         if (Altitude <= 0)
             Altitude = 0;
