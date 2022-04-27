@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Spawning : MonoBehaviour
 {
     public Transform[] spawnLocations;
-    public GameObject[] players = new GameObject[2];
+    public static GameObject[] players = new GameObject[2];
     private int nbr = 0;
 
     public void OnPLayerJoined(PlayerInput playerInput)

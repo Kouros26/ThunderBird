@@ -11,8 +11,8 @@ public class HandHitbox : MonoBehaviour
     public static bool dragon = false;
     public static bool Engine1 = false;
     public static bool Engine2 = false;
-
-    public  bool includeChildren = true;
+    public bool OnDoor;
+    public bool includeChildren = true;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +23,7 @@ public class HandHitbox : MonoBehaviour
                 break;
 
             case "pickup":
+                Debug.Log("Test");
                 pickable = true;
                 item = other.gameObject;
                 break;
@@ -41,6 +42,9 @@ public class HandHitbox : MonoBehaviour
                 Engine2 = true;
                 break;
 
+            case "Door":
+                OnDoor = true;
+                break;
         }
     }
 
@@ -58,6 +62,10 @@ public class HandHitbox : MonoBehaviour
 
             case "Engine2":
                 Engine2 = false;
+                break;
+
+            case "Door":
+                OnDoor = false;
                 break;
         }
 

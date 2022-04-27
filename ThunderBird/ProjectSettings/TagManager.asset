@@ -7,6 +7,9 @@ TagManager:
   - Dragon
   - Engine1
   - Engine2
+  - pickup
+  - Interactible
+  - Door
   layers:
   - Default
   - TransparentFX
