@@ -8,11 +8,14 @@ public class DoorManagement : MonoBehaviour
 {
     private bool PlayerOne, PlayerTwo;
     private bool ThatDoor;
-    public GameObject obj;
-    public GameObject objTwo;
-    private Animator anim;
-    private Animator animTwo;
+    public GameObject obj, objTwo;
+    public GameObject ParentObj, ParentObjTwo;
+
+    private Animator anim, animTwo;
+
     private bool isOpen;
+
+    private List<bool> PlayersOnDoor = new List<bool>();
 
     void Start()
     {
@@ -55,13 +58,22 @@ public class DoorManagement : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            ThatDoor = true;
+            PlayersOnDoor.Add(true);
+
+            if (PlayersOnDoor[0] == true && PlayersOnDoor[1] == true)
+                ThatDoor = true;
+            Debug.Log(PlayersOnDoor[0] + "," + PlayersOnDoor[1]);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
+        {
+            PlayersOnDoor.RemoveAt(PlayersOnDoor.Count - 1);
             ThatDoor = false;
+
+            Debug.Log(PlayersOnDoor[0] + "," + PlayersOnDoor[1]);
+        }
     }
 }
