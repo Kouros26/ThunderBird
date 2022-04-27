@@ -13,6 +13,7 @@ public class DoorManagement : MonoBehaviour
     private Animator anim;
     private Animator animTwo;
     private bool isOpen;
+    public Spawning spawningScript;
 
     void Start()
     {
@@ -28,8 +29,8 @@ public class DoorManagement : MonoBehaviour
 
     public void DoorOpening()
     {
-        PlayerOne = Spawning.players[0].GetComponentInChildren<HandHitbox>().OnDoor;
-        PlayerTwo = Spawning.players[1].GetComponentInChildren<HandHitbox>().OnDoor;
+        PlayerOne = spawningScript.players[0].GetComponentInChildren<HandHitbox>().OnDoor;
+        PlayerTwo = spawningScript.players[1].GetComponentInChildren<HandHitbox>().OnDoor;
 
         if (PlayerOne && PlayerTwo && ThatDoor)
         {
@@ -42,7 +43,8 @@ public class DoorManagement : MonoBehaviour
         }
 
         else if (isOpen)
-            DoorClosing();
+            //DoorClosing();
+            return;
     }
 
     public void DoorClosing()
