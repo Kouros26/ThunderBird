@@ -38,4 +38,9 @@ public class PlaneStick : MonoBehaviour
         if (Altitude <= 0)
             Altitude = 0;
     }
+
+    void Punishment()
+    {
+        Altitude = Altitude - 1000;
+    }
 }
