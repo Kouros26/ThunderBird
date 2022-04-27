@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4514047, g: 0.50089765, b: 0.57231545, a: 1}
+  m_IndirectSpecularColor: {r: 0.45140457, g: 0.50089765, b: 0.5723156, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8721,6 +8721,38 @@ PrefabInstance:
       propertyPath: objTwo
       value: 
       objectReference: {fileID: 1505522500}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: LightOne
+      value: 
+      objectReference: {fileID: 886368083}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: LightTwo
+      value: 
+      objectReference: {fileID: 1190441894}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: GroundOne
+      value: 
+      objectReference: {fileID: 1647596625}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: GroundTwo
+      value: 
+      objectReference: {fileID: 1128583605}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: TWOLightOne
+      value: 
+      objectReference: {fileID: 1802536601}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: TWOLightTwo
+      value: 
+      objectReference: {fileID: 523500920}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: TWOGroundOne
+      value: 
+      objectReference: {fileID: 239971614}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: TWOGroundTwo
+      value: 
+      objectReference: {fileID: 405823321}
     - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
       propertyPath: spawningScript
       value: 
@@ -18985,6 +19017,38 @@ PrefabInstance:
       propertyPath: objTwo
       value: 
       objectReference: {fileID: 9170023760819068346}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: LightOne
+      value: 
+      objectReference: {fileID: 2101706058}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: LightTwo
+      value: 
+      objectReference: {fileID: 1923071307}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: GroundOne
+      value: 
+      objectReference: {fileID: 253555357}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: GroundTwo
+      value: 
+      objectReference: {fileID: 13555877}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: TWOLightOne
+      value: 
+      objectReference: {fileID: 3363383028534546956}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: TWOLightTwo
+      value: 
+      objectReference: {fileID: 1713441763}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: TWOGroundOne
+      value: 
+      objectReference: {fileID: 1200961785621716526}
+    - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
+      propertyPath: TWOGroundTwo
+      value: 
+      objectReference: {fileID: 1630727156}
     - target: {fileID: 1631491565, guid: 0897f9fd543a9c34b835e76fbea53ede, type: 3}
       propertyPath: spawningScript
       value: 

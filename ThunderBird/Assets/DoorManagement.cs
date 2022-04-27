@@ -9,7 +9,8 @@ public class DoorManagement : MonoBehaviour
     private bool PlayerOne, PlayerTwo;
     private bool ThatDoor;
     public GameObject obj, objTwo;
-    public GameObject ParentObj, ParentObjTwo;
+    public GameObject LightOne, LightTwo, GroundOne, GroundTwo;
+    public GameObject TWOLightOne, TWOLightTwo, TWOGroundOne, TWOGroundTwo;
 
     private Animator anim, animTwo;
 
@@ -42,6 +43,16 @@ public class DoorManagement : MonoBehaviour
                 anim.SetTrigger("Open");
                 animTwo.SetTrigger("Open");
                 isOpen = true;
+
+                LightOne.SetActive(false);
+                LightTwo.SetActive(true);
+                GroundOne.SetActive(false);
+                GroundTwo.SetActive(true);
+
+                TWOLightOne.SetActive(false);
+                TWOLightTwo.SetActive(true);
+                TWOGroundOne.SetActive(false);
+                TWOGroundTwo.SetActive(true);
             }
         }
 
