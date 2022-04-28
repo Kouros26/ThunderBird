@@ -3217,7 +3217,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5086706399543851255}
   - component: {fileID: 4691948135670947610}
-  - component: {fileID: 5866899933201823894}
   - component: {fileID: 4691948135670947623}
   - component: {fileID: 6360197822015096414}
   - component: {fileID: 4691948135670947622}
@@ -3272,20 +3271,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5866899933201823894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5610442977176724045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3befaa86f38f84846a29d353f091b6f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 5610442977176724045}
-  playerHands: {fileID: 4691948134359711381}
 --- !u!114 &4691948135670947623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3476,7 +3461,7 @@ MonoBehaviour:
   hasObjectFuel: 0
   player: {fileID: 5610442977176724045}
   playerHands: {fileID: 4691948134359711381}
-  item: {fileID: 403058341967283557, guid: 3a59ee425a5bc3a428bc8af1de6aa77b, type: 3}
+  item: {fileID: 0}
   hasObject: 0
   caressTheDragonScript: {fileID: 0}
 --- !u!114 &4691948135670947621

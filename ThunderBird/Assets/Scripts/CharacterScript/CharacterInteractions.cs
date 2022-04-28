@@ -30,19 +30,22 @@ public class CharacterInteractions : MonoBehaviour
     void Start()
     {
         caressTheDragonScript = GameObject.Find("polySurface154").GetComponent<CaressTheDragon>();
-       // particles = GetComponent<ParticleSystem>();
-        //particles.Stop();
     }
 
     void FixedUpdate()
     {
-        if (!follow) return;
-        item.transform.position = playerHands.transform.position;
-        pickable = false;
-
-        if (!followWater) return;
-        BucketWater.transform.position = playerHands.transform.position;
-        water = false;
+        if (!follow)
+        {
+            return;
+        }
+        if(follow)
+        {
+            item.transform.position = playerHands.transform.position;
+            pickable = false;
+        }
+        //if (!followWater) return;
+        //BucketWater.transform.position = playerHands.transform.position;
+        //water = false;
 
     }
 
@@ -55,13 +58,6 @@ public class CharacterInteractions : MonoBehaviour
             interacting = false; HandHitbox.interactible = false;
         
 
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "pickup")
-        {
-            //blablabla interact bucket
-        }
     }
 
     public void ResetEngine(InputAction.CallbackContext context)
@@ -117,56 +113,56 @@ public class CharacterInteractions : MonoBehaviour
         }
     }
 
-    public void Water(InputAction.CallbackContext context)
-    {
+    //public void Water(InputAction.CallbackContext context)
+    //{
 
-        if (!hasObject && !hasObjectWater)
-        {
-            if (water)
-            {
-                BucketWater.GetComponent<Rigidbody>().useGravity = false;
-                followWater = true;
-                hasObject = true;
-                hasObjectWater = true;
-            }
-        }
+    //    if (!hasObject && !hasObjectWater)
+    //    {
+    //        if (water)
+    //        {
+    //            BucketWater.GetComponent<Rigidbody>().useGravity = false;
+    //            followWater = true;
+    //            hasObject = true;
+    //            hasObjectWater = true;
+    //        }
+    //    }
 
-        else
-        {
-            BucketWater.GetComponent<Rigidbody>().useGravity = true;
-            followWater = false;
-            hasObject = false;
-            hasObjectWater = false;
-        }
-    }
+    //    else
+    //    {
+    //        BucketWater.GetComponent<Rigidbody>().useGravity = true;
+    //        followWater = false;
+    //        hasObject = false;
+    //        hasObjectWater = false;
+    //    }
+    //}
 
-    public void Fuel(InputAction.CallbackContext context)
-    {
-        bool temp = context.performed;
+    //public void Fuel(InputAction.CallbackContext context)
+    //{
+    //    bool temp = context.performed;
 
-        if (temp && interactible)
-        {
-            interacting = true;
-            return;
-        }
+    //    if (temp && interactible)
+    //    {
+    //        interacting = true;
+    //        return;
+    //    }
 
-        if (!hasObject)
-        {
-            if (pickable)
-            {
-                item.GetComponent<Rigidbody>().useGravity = false;
-                follow = true;
-                hasObject = true;
-            }
-        }
+    //    if (!hasObject)
+    //    {
+    //        if (pickable)
+    //        {
+    //            item.GetComponent<Rigidbody>().useGravity = false;
+    //            follow = true;
+    //            hasObject = true;
+    //        }
+    //    }
 
-        else
-        {
-            item.GetComponent<Rigidbody>().useGravity = true;
-            follow = false;
-            hasObject = false;
-        }
-    }
+    //    else
+    //    {
+    //        item.GetComponent<Rigidbody>().useGravity = true;
+    //        follow = false;
+    //        hasObject = false;
+    //    }
+    //}
 
     public void HasObjectEmptyToWater(InputAction.CallbackContext context)
     {

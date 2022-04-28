@@ -783,7 +783,6 @@ GameObject:
   - component: {fileID: 82040573282494183}
   - component: {fileID: 82040573282494170}
   - component: {fileID: 1764747738021986211}
-  - component: {fileID: 6909925365293681635}
   - component: {fileID: 82040573282494171}
   - component: {fileID: 82040573282494168}
   - component: {fileID: 1749002322523378300}
@@ -994,20 +993,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1000395768221211568}
   playerHands: {fileID: 82040571434370920}
---- !u!114 &6909925365293681635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000395768221211568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3befaa86f38f84846a29d353f091b6f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1000395768221211568}
-  playerHands: {fileID: 82040571434370920}
 --- !u!114 &82040573282494171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,7 +1011,7 @@ MonoBehaviour:
   hasObjectFuel: 0
   player: {fileID: 1000395768221211568}
   playerHands: {fileID: 82040571434370920}
-  item: {fileID: 403058341967283557, guid: 3a59ee425a5bc3a428bc8af1de6aa77b, type: 3}
+  item: {fileID: 0}
   hasObject: 0
   caressTheDragonScript: {fileID: 0}
 --- !u!114 &82040573282494168
