@@ -51,8 +51,6 @@ public class EventScript : MonoBehaviour
     }
     #endregion
 
-
-
     public void FuelMission()
     {
         PopUpFuel.SetActive(true);
