@@ -7,28 +7,23 @@ public class CharacterInteractions : MonoBehaviour
 {
     public static bool interacting;
     [SerializeField] private bool interactible = HandHitbox.interactible;
+    [SerializeField] private rumble rumble;
 
     [Header ("Dragon")]
     ParticleSystem particles;
     public bool includeChildren = true;
-    bool dragon = false, love = false;
+    private bool dragon, love;
 
-    [Header("ResetEngine")]
-    bool Engine1 = false;
-    bool Engine2 = false;
+    [Header("ResetEngine")] private bool Engine1, Engine2;
 
     [Header("Water&Fuel")]
-    bool water = false, fuel = false, emptybucket = false, followWater = false, fuelpumps = false;
-    GameObject BucketWater;
-    GameObject BucketFuel;
-    GameObject BucketEmpty;
-    public bool hasObjectWater = false, hasObjectFuel = false;
+    private bool water, fuel, emptybucket, followWater, fuelpumps;
+    private GameObject BucketWater, BucketFuel, BucketEmpty;
+    public bool hasObjectWater, hasObjectFuel;
 
-    public GameObject player;
-    public GameObject playerHands;
-    GameObject item;
-    bool pickable = false, follow = false;
-        public bool hasObject = false;
+    public GameObject player, playerHands, item;
+    private bool pickable, follow;
+    public bool hasObject = false;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +50,7 @@ public class CharacterInteractions : MonoBehaviour
         if (!interacting) return;
         if (CharacterMovement.moving)
             interacting = false; HandHitbox.interactible = false;
+        
 
     }
 

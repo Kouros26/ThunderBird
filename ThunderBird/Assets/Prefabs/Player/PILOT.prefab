@@ -3210,6 +3210,7 @@ GameObject:
   - component: {fileID: 9109800051141598578}
   - component: {fileID: 3491129645976537322}
   - component: {fileID: 4412980066643993300}
+  - component: {fileID: 2247506740926544332}
   m_Layer: 0
   m_Name: PILOT
   m_TagString: Player
@@ -3454,11 +3455,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactible: 0
+  rumble: {fileID: 2247506740926544332}
   includeChildren: 1
   hasObjectWater: 0
   hasObjectFuel: 0
   player: {fileID: 5610442977176724045}
   playerHands: {fileID: 4691948134359711381}
+  item: {fileID: 0}
   hasObject: 0
 --- !u!114 &4691948135670947621
 MonoBehaviour:
@@ -3475,6 +3478,8 @@ MonoBehaviour:
   controller: {fileID: 342074499380177042}
   PlayerSpeed: 15
   turnSmoothTime: 0.1
+  rumble: {fileID: 2247506740926544332}
+  timer: 0.4375
   playerAnimations: {fileID: 4691948135670947610}
   paused: 0
   checkForMove: 0
@@ -3552,6 +3557,18 @@ MonoBehaviour:
   chController: {fileID: 5086706399543851255}
   speedUpDown: 20
   FPSInput: {fileID: 4691948135670947621}
+--- !u!114 &2247506740926544332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610442977176724045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e3ecd4833f2bb4d83a38ddd759a06c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5658877251104730583
 GameObject:
   m_ObjectHideFlags: 0

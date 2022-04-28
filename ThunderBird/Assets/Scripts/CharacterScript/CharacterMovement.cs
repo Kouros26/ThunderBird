@@ -9,6 +9,9 @@ public class CharacterMovement : MonoBehaviour
     public CharacterController controller;
     [SerializeField] private float PlayerSpeed;
     [SerializeField] private float turnSmoothTime = 0.1f;
+    [SerializeField] private rumble rumble;
+    [SerializeField] private float timer = 0.5f;
+    private float chrono;
 
     private float turnSmoothVelocity;
     private Vector2 movementDir;
@@ -38,11 +41,19 @@ public class CharacterMovement : MonoBehaviour
 
             if (direction.magnitude > 0.0f)
             {
+                chrono += Time.deltaTime;
+
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
                 controller.Move(direction * PlayerSpeed * Time.deltaTime);
                 moving = true;
+
+                if (chrono > timer)
+                {
+                    rumble.Rumblepulse(0f, 0.2f, 0.15f, 0.2f);
+                    chrono -= timer;
+                }
             }
 
             else moving = false;
