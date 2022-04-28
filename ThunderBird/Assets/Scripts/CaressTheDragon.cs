@@ -6,24 +6,28 @@ using UnityEngine.InputSystem;
 public class CaressTheDragon : MonoBehaviour
 {
     public ParticleSystem heart;
-    public bool includeChildren = true;
     bool dragon = false, love = false;
 
-    CharacterMovement characterMovementScript;
+ //   CharacterMovement characterMovementScript;
 
     void Start()
     {
-
+        heart = GetComponent<ParticleSystem>();
+        heart.Stop();
     }
 
-    //void FixedUpdate()
+    void FixedUpdate()
 
-    //{
-    //    if (love)
-    //    {
-    //        heart.Play(includeChildren);
-    //    }
-    //}
+    {
+        if (love)
+        {
+            heart.Play();
+        }
+        else
+        {
+            heart.Stop();
+        }
+    }
 
     //private void OnTriggerEnter(Collider other)
     //{

@@ -10,9 +10,9 @@ public class CharacterInteractions : MonoBehaviour
     [SerializeField] private rumble rumble;
 
     [Header ("Dragon")]
-    ParticleSystem particles;
-    public bool includeChildren = true;
-    private bool dragon, love;
+   // ParticleSystem particles;
+    private bool dragon;
+    public bool love;
 
     [Header("ResetEngine")] private bool Engine1, Engine2;
 
@@ -28,7 +28,8 @@ public class CharacterInteractions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        particles.Stop(includeChildren);
+       // particles = GetComponent<ParticleSystem>();
+        //particles.Stop();
     }
 
     void FixedUpdate()
@@ -74,14 +75,10 @@ public class CharacterInteractions : MonoBehaviour
         if (dragon)
         {
             Debug.Log("Clique!!!!!!");
-            particles.Play(includeChildren);
-
             love = true;
         }
         else
         {
-            particles.Stop(includeChildren);
-
             love = false;
         }
     }
