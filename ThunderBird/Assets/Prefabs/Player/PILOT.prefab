@@ -2460,6 +2460,7 @@ GameObject:
   - component: {fileID: 4691948134359711380}
   - component: {fileID: 5944544886702159154}
   - component: {fileID: 1086099952192522853}
+  - component: {fileID: 1687777135404349758}
   m_Layer: 0
   m_Name: Hands
   m_TagString: Untagged
@@ -2508,6 +2509,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDoor: 0
   includeChildren: 1
+--- !u!54 &1687777135404349758
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4691948134359711381}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4729635732005488368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3461,7 +3478,7 @@ MonoBehaviour:
   hasObjectFuel: 0
   player: {fileID: 5610442977176724045}
   playerHands: {fileID: 4691948134359711381}
-  item: {fileID: 0}
+  item: {fileID: 403058341967283557, guid: 3a59ee425a5bc3a428bc8af1de6aa77b, type: 3}
   hasObject: 0
 --- !u!114 &4691948135670947621
 MonoBehaviour:

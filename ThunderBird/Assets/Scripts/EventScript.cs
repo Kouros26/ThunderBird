@@ -6,6 +6,7 @@ public class EventScript : MonoBehaviour
 {
     private static GameObject Cockpit1;
     private static GameObject Cockpit2;
+
     private static GameObject PopUpCockpit;
 
     private static GameObject Switch;

@@ -2,40 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cockpit : MonoBehaviour
+public class Turbulences : MonoBehaviour
 {
-    public Transform pilot;
-    public Transform pilotView;
-    //public SkillCheck skillCheckScript;
+    public Transform coPilot;
+    public Transform coPilotView;
+    public static bool coPilotReady = false;
     CharacterMovement characterMovementScript;
     Transform player;
 
     Animator playerAnim;
-
-    private void Start()
-    {
-        //eventScript.CockpitMission();      
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             //skillCheckScript.SkillCheckStart();
-            EventScript.isOccupied = true;
+            coPilotReady = true;
             player = other.GetComponent<Transform>();
-            player.transform.position = pilot.transform.position;
-            player.transform.LookAt(pilotView);
+            player.transform.position = coPilot.transform.position;
+            player.transform.LookAt(coPilotView);
             playerAnim = other.GetComponent<Animator>();
             playerAnim.SetBool("Sit", true);
             characterMovementScript = other.GetComponent<CharacterMovement>();
             characterMovementScript.paused = true;
             EventScript.CockpitMission();
-            StartCoroutine(WaitForMove());
+            StartCoroutine(WaitForEventEnd());
         }
     }
 
-    IEnumerator WaitForMove()
+    IEnumerator WaitForEventEnd()
     {
         yield return new WaitForSeconds(2);
         characterMovementScript.checkForMove = true;

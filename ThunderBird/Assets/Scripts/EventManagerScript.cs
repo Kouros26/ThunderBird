@@ -4,55 +4,56 @@ using UnityEngine;
 
 public class EventManagerScript : MonoBehaviour
 {
-    public bool isEventThunderOn;
-    public bool isEventShakeOn;
-    public bool isEventAirOn;
+    public bool isEventThunderOn = false;
+    public static bool isEventShakeOn = false;
+    public bool isEventAirOn = false;
 
     public GameObject Thunder;
     public GameObject Shake;
     public GameObject Air;
 
-    [SerializeField] private GameObject objCockpit, objTwoCockpit;
-    [SerializeField] private GameObject LightOneCockpit, LightTwoCockpit, GroundOneCockpit, GroundTwoCockpit;
-    [SerializeField] private GameObject TWOLightOneCockpit, TWOLightTwoCockpit, TWOGroundOneCockpit, TWOGroundTwoCockpit;
-    [SerializeField] private GameObject CockpitLock;
+    [SerializeField] private GameObject[] doorTriggers;
 
-    [SerializeField] private GameObject objKitchen, objTwoKitchen;
-    [SerializeField] private GameObject LightOneKitchen, LightTwoKitchen, GroundOneKitchen, GroundTwoKitchen;
-    [SerializeField] private GameObject TWOLightOneKitchen, TWOLightTwoKitchen, TWOGroundOneKitchen, TWOGroundTwoKitchen;
-    [SerializeField] private GameObject KitchenLock;
-
-    [SerializeField] private GameObject objEngine, objTwoEngine;
-    [SerializeField] private GameObject LightOneEngine, LightTwoEngine, GroundOneEngine, GroundTwoEngine;
-    [SerializeField] private GameObject TWOLightOneEngine, TWOLightTwoEngine, TWOGroundOneEngine, TWOGroundTwoEngine;
-    [SerializeField] private GameObject EngineLock;
-
-    Animator anim1, anim2;
+    [SerializeField] private GameObject cam;
+    Animator camShake;
 
     bool specialTask = false;
-    bool task = false;
-    bool alreadyFire = false;
-    bool alreadyFuel = false;
-    bool alreadyDoor = false;
-    bool alreadyPet = false;
+    public static bool task = false;
+    bool alreadyFire = true;
+    bool alreadyFuel = true;
+    public static bool alreadyDoor = false;
+    bool alreadyPet = true;
 
+    public static bool allDoorsOpen = false;
+    public static bool closeCockpit = false;
+    public static bool closeKitchen = false;
+    public static bool closeEngine = false;
+
+    public PlaneStick planeStickScript;
+
+    private void Start()
+    {
+        camShake = cam.GetComponent<Animator>();
+    }
 
     void Update()
     {
         if (!specialTask)
         {
             specialTask = true;
-            StartCoroutine(WaitForSpecialMission());
+            StartCoroutine(WaitForSpecialMission());       
         }
 
         if (!task)
         {
+            task = true;
             StartCoroutine(WaitForMission());
         }
 
+        //DEBUG MISSION
         if(Input.GetKeyDown(KeyCode.Y))
         {
-            DoorClose();
+            Turbulences();
         }
     }
 
@@ -86,6 +87,17 @@ public class EventManagerScript : MonoBehaviour
         Shake.SetActive(true);
         Thunder.SetActive(false);
         Air.SetActive(false);
+        planeStickScript.shakingEvent = true;
+        camShake.SetBool("Shake", true);
+        StartCoroutine(ShakingEvent());
+    }
+
+    IEnumerator ShakingEvent()
+    {
+        yield return new WaitForSeconds(40);
+        planeStickScript.shakingEvent = false;
+        camShake.SetBool("Shake", false);
+        Shake.SetActive(false);
     }
 
     void Depressurization()
@@ -100,6 +112,22 @@ public class EventManagerScript : MonoBehaviour
         int random = Random.Range(8, 17);
         yield return new WaitForSeconds(random);
         int mission = Random.Range(1, 5);
+        if(mission == 1)
+        {
+            Fire();
+        }
+        if (mission == 2)
+        {
+            Fuel();
+        }
+        if (mission == 3)
+        {
+            PetTheDragon();
+        }
+        if (mission ==4)
+        {
+            DoorClose();
+        }
     }
 
     void Fire()
@@ -124,7 +152,8 @@ public class EventManagerScript : MonoBehaviour
 
         else
         {
-            PetTheDragon();
+            task = false;
+            return;
         }
     }
 
@@ -132,6 +161,8 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyPet)
         {
+            task = false;
+            alreadyPet = true;
 
         }
 
@@ -143,67 +174,13 @@ public class EventManagerScript : MonoBehaviour
 
     void DoorClose()
     {
-        if(!alreadyDoor)
+        if(!alreadyDoor && allDoorsOpen)
         {
+            task = false;
             alreadyDoor = true;
             int closeSomething = Random.Range(0, 3);
-            print(closeSomething);
-            if(closeSomething == 0)
-            {
-                anim1 = objCockpit.GetComponent<Animator>();
-                anim2 = objTwoCockpit.GetComponent<Animator>();
-                anim1.SetTrigger("Close");
-                anim2.SetTrigger("Close");
-                CockpitLock.SetActive(true);
-
-                LightTwoCockpit.SetActive(false);
-                LightOneCockpit.SetActive(true);
-                GroundTwoCockpit.SetActive(false);
-                GroundOneCockpit.SetActive(true);
-
-                TWOLightTwoCockpit.SetActive(false);
-                TWOLightOneCockpit.SetActive(true);
-                TWOGroundTwoCockpit.SetActive(false);
-                TWOGroundOneCockpit.SetActive(true);
-            }
-
-            else if (closeSomething == 1)
-            {
-                anim1 = objKitchen.GetComponent<Animator>();
-                anim2 = objTwoKitchen.GetComponent<Animator>();
-                anim1.SetTrigger("Close");
-                anim2.SetTrigger("Close");
-                KitchenLock.SetActive(true);
-
-                LightTwoKitchen.SetActive(false);
-                LightOneKitchen.SetActive(true);
-                GroundTwoKitchen.SetActive(false);
-                GroundOneKitchen.SetActive(true);
-
-                TWOLightTwoKitchen.SetActive(false);
-                TWOLightOneKitchen.SetActive(true);
-                TWOGroundTwoKitchen.SetActive(false);
-                TWOGroundOneKitchen.SetActive(true);
-            }
-
-            else if (closeSomething == 2)
-            {
-                anim1 = objEngine.GetComponent<Animator>();
-                anim2 = objTwoEngine.GetComponent<Animator>();
-                anim1.SetTrigger("Close");
-                anim2.SetTrigger("Close");
-                EngineLock.SetActive(true);
-
-                LightTwoEngine.SetActive(false);
-                LightOneEngine.SetActive(true);
-                GroundTwoEngine.SetActive(false);
-                GroundOneEngine.SetActive(true);
-
-                TWOLightTwoEngine.SetActive(false);
-                TWOLightOneEngine.SetActive(true);
-                TWOGroundTwoEngine.SetActive(false);
-                TWOGroundOneEngine.SetActive(true);
-            }
+            DoorManagement pickedObject = doorTriggers[closeSomething].GetComponent<DoorManagement>();
+            pickedObject.DoorClosing();
         }
 
         else

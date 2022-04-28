@@ -7,6 +7,7 @@ public class PlaneStick : MonoBehaviour
 {
     public static float Altitude = 33000;
     public static float AltitudeMax = Altitude;
+    [SerializeField] public bool shakingEvent = false;
 
     private float x, y;
 
@@ -19,18 +20,35 @@ public class PlaneStick : MonoBehaviour
     void Update()
     {
         x += 0.01f;
-
-        if (EventScript.isOccupied)
+        if(!shakingEvent)
         {
-            x = 0;
-            y += 0.05f;
-            Altitude += y * y * Time.deltaTime;
-            Altitude = Mathf.RoundToInt(Altitude);
+            if (EventScript.isOccupied)
+            {
+                x = 0;
+                y += 0.05f;
+                Altitude += y * y * Time.deltaTime;
+                Altitude = Mathf.RoundToInt(Altitude);
 
-            if (Altitude >= AltitudeMax)
-                Altitude = AltitudeMax;
+                if (Altitude >= AltitudeMax)
+                    Altitude = AltitudeMax;
 
-            return;
+                return;
+            }
+        }
+        if (shakingEvent)
+        {
+            if (EventScript.isOccupied && Turbulences.coPilotReady)
+            {
+                x = 0;
+                y += 0.05f;
+                Altitude += y * y * Time.deltaTime;
+                Altitude = Mathf.RoundToInt(Altitude);
+
+                if (Altitude >= AltitudeMax)
+                    Altitude = AltitudeMax;
+
+                return;
+            }
         }
 
         y = 0;

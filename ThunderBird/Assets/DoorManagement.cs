@@ -8,7 +8,7 @@ public class DoorManagement : MonoBehaviour
 {
     private bool PlayerOne, PlayerTwo;
     private bool ThatDoor;
-    public GameObject obj, objTwo;
+    public GameObject obj, objTwo, doorUI;
     public GameObject LightOne, LightTwo, GroundOne, GroundTwo;
     public GameObject TWOLightOne, TWOLightTwo, TWOGroundOne, TWOGroundTwo;
 
@@ -16,16 +16,17 @@ public class DoorManagement : MonoBehaviour
 
     private bool isOpen;
     public Spawning spawningScript;
+    static int doorCount;
 
     private List<bool> PlayersOnDoor = new List<bool>();
 
     void Start()
     {
+        doorCount = 0;
         anim = obj.GetComponent<Animator>();
         animTwo = objTwo.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         DoorOpening();
@@ -43,7 +44,9 @@ public class DoorManagement : MonoBehaviour
                 anim.SetTrigger("Open");
                 animTwo.SetTrigger("Open");
                 isOpen = true;
+                doorCount = doorCount + 1;
 
+                doorUI.SetActive(false);
                 LightOne.SetActive(false);
                 LightTwo.SetActive(true);
                 GroundOne.SetActive(false);
@@ -53,11 +56,16 @@ public class DoorManagement : MonoBehaviour
                 TWOLightTwo.SetActive(true);
                 TWOGroundOne.SetActive(false);
                 TWOGroundTwo.SetActive(true);
+                if (doorCount == 3)
+                {
+                    EventManagerScript.allDoorsOpen = true;
+                }
+                if (doorCount >= 4)
+                {
+                    EventManagerScript.alreadyDoor = false;
+                }
             }
         }
-
-        //else if (isOpen)
-        //    DoorClosing();
     }
 
     public void DoorClosing()
@@ -66,6 +74,7 @@ public class DoorManagement : MonoBehaviour
         animTwo.SetTrigger("Close");
         isOpen = false;
 
+        doorUI.SetActive(true);
         LightTwo.SetActive(false);
         LightOne.SetActive(true);
         GroundTwo.SetActive(false);

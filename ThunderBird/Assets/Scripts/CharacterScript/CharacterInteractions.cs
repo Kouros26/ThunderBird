@@ -53,6 +53,13 @@ public class CharacterInteractions : MonoBehaviour
         
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "pickup")
+        {
+            //blablabla interact bucket
+        }
+    }
 
     public void ResetEngine(InputAction.CallbackContext context)
     {
