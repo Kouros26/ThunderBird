@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.4514047, g: 0.50089765, b: 0.57231545, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2659,7 +2659,6 @@ Transform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 2114285561}
-  - {fileID: 1450918193}
   - {fileID: 508519644}
   - {fileID: 168327929}
   - {fileID: 351097149}
@@ -5780,7 +5779,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 81583134}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &168327930
 MeshRenderer:
@@ -6115,6 +6114,36 @@ MonoBehaviour:
   Thunder: {fileID: 2066724900}
   Shake: {fileID: 1640617997}
   Air: {fileID: 1752426164}
+  objCockpit: {fileID: 1934592616}
+  objTwoCockpit: {fileID: 1179506646}
+  LightOneCockpit: {fileID: 1259529029}
+  LightTwoCockpit: {fileID: 329985441}
+  GroundOneCockpit: {fileID: 1193206975}
+  GroundTwoCockpit: {fileID: 1435435524}
+  TWOLightOneCockpit: {fileID: 1710896598}
+  TWOLightTwoCockpit: {fileID: 1935894830}
+  TWOGroundOneCockpit: {fileID: 1450918192}
+  TWOGroundTwoCockpit: {fileID: 858041445}
+  objKitchen: {fileID: 1762819735}
+  objTwoKitchen: {fileID: 1099619760}
+  LightOneKitchen: {fileID: 665414978}
+  LightTwoKitchen: {fileID: 551233341}
+  GroundOneKitchen: {fileID: 927200029}
+  GroundTwoKitchen: {fileID: 1942011980}
+  TWOLightOneKitchen: {fileID: 923613671}
+  TWOLightTwoKitchen: {fileID: 2144877265}
+  TWOGroundOneKitchen: {fileID: 2059859883}
+  TWOGroundTwoKitchen: {fileID: 1817692134}
+  objEngine: {fileID: 1764061426}
+  objTwoEngine: {fileID: 856344216}
+  LightOneEngine: {fileID: 1550571625}
+  LightTwoEngine: {fileID: 768198766}
+  GroundOneEngine: {fileID: 121071596}
+  GroundTwoEngine: {fileID: 1192843430}
+  TWOLightOneEngine: {fileID: 2085190958}
+  TWOLightTwoEngine: {fileID: 2024569882}
+  TWOGroundOneEngine: {fileID: 978212007}
+  TWOGroundTwoEngine: {fileID: 108271669}
 --- !u!1 &172287742
 GameObject:
   m_ObjectHideFlags: 0
@@ -7346,7 +7375,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 81583134}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &204545277
 MeshCollider:
@@ -12247,7 +12276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 81583134}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &349172253
 MeshCollider:
@@ -12343,7 +12372,7 @@ Transform:
   m_LocalScale: {x: 0.26288274, y: 1, z: 0.17479406}
   m_Children: []
   m_Father: {fileID: 81583134}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &351097150
 MeshCollider:
@@ -17658,7 +17687,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 81583134}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &508519645
 MeshCollider:
@@ -22242,7 +22271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &635264000
 Transform:
   m_ObjectHideFlags: 0
@@ -28353,7 +28382,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1206100546}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!64 &858041447
 MeshCollider:
@@ -34227,7 +34256,7 @@ Transform:
   m_LocalScale: {x: 0.26288274, y: 1, z: 0.17479406}
   m_Children: []
   m_Father: {fileID: 81583134}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1041944465
 MeshCollider:
@@ -40084,7 +40113,7 @@ Transform:
   - {fileID: 1600031045}
   - {fileID: 1969264568}
   m_Father: {fileID: 1206100546}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1179506648
 Animator:
@@ -40871,12 +40900,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -299.99997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1450918193}
   - {fileID: 858041446}
   - {fileID: 1710896599}
   - {fileID: 1935894831}
   - {fileID: 1179506647}
   m_Father: {fileID: 81583134}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1208725674
 GameObject:
@@ -44057,7 +44087,7 @@ Transform:
   - {fileID: 1656721271}
   - {fileID: 735135804}
   m_Father: {fileID: 81583134}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306345024
 GameObject:
@@ -48241,11 +48271,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450918192}
   m_LocalRotation: {x: -0, y: 0.0000008046627, z: -0, w: -1}
-  m_LocalPosition: {x: 0.80045706, y: 8, z: -299.99997}
+  m_LocalPosition: {x: 0.8004379, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 81583134}
-  m_RootOrder: 1
+  m_Father: {fileID: 1206100546}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1450918194
 MeshRenderer:
@@ -57530,7 +57560,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1206100546}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1710896600
 MeshRenderer:
@@ -61472,7 +61502,7 @@ Transform:
   - {fileID: 1762819737}
   - {fileID: 547770111}
   m_Father: {fileID: 81583134}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1871016796
 GameObject:
@@ -63519,7 +63549,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1206100546}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!64 &1935894832
 MeshCollider:
