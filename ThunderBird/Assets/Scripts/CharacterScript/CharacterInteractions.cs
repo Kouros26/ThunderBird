@@ -23,6 +23,7 @@ public class CharacterInteractions : MonoBehaviour
     public GameObject player, playerHands, item;
     private bool pickable, follow;
     public bool hasObject = false;
+    public bool bucketFilled = false;
 
     public CaressTheDragon caressTheDragonScript;
 
@@ -110,76 +111,30 @@ public class CharacterInteractions : MonoBehaviour
             item.GetComponent<Rigidbody>().useGravity = true;
             follow = false;
             hasObject = false;
+            bucketFilled = false;
+            hasObjectWater = false;
+            hasObjectFuel = false;
         }
     }
 
-    //public void Water(InputAction.CallbackContext context)
-    //{
-
-    //    if (!hasObject && !hasObjectWater)
-    //    {
-    //        if (water)
-    //        {
-    //            BucketWater.GetComponent<Rigidbody>().useGravity = false;
-    //            followWater = true;
-    //            hasObject = true;
-    //            hasObjectWater = true;
-    //        }
-    //    }
-
-    //    else
-    //    {
-    //        BucketWater.GetComponent<Rigidbody>().useGravity = true;
-    //        followWater = false;
-    //        hasObject = false;
-    //        hasObjectWater = false;
-    //    }
-    //}
-
-    //public void Fuel(InputAction.CallbackContext context)
-    //{
-    //    bool temp = context.performed;
-
-    //    if (temp && interactible)
-    //    {
-    //        interacting = true;
-    //        return;
-    //    }
-
-    //    if (!hasObject)
-    //    {
-    //        if (pickable)
-    //        {
-    //            item.GetComponent<Rigidbody>().useGravity = false;
-    //            follow = true;
-    //            hasObject = true;
-    //        }
-    //    }
-
-    //    else
-    //    {
-    //        item.GetComponent<Rigidbody>().useGravity = true;
-    //        follow = false;
-    //        hasObject = false;
-    //    }
-    //}
-
     public void HasObjectEmptyToWater(InputAction.CallbackContext context)
     {
-        if (hasObject && fuelpumps)
+        if (hasObject && fuelpumps && !bucketFilled)
         {
             Debug.Log("L'eau c'est la vie meme dans un sceau");
             hasObjectWater = true;
-            hasObjectFuel = false;
+            bucketFilled = true;
+            //hasObjectFuel = false;
         }
     }
     public void HasObjectEmptyToFuel(InputAction.CallbackContext context)
     {
-        if (hasObject && fuelpumps)
+        if (hasObject && fuelpumps && !bucketFilled)
         {
             Debug.Log("Du fuel dans le malibu et dans le sceau");
-            hasObjectWater = false;
+            //hasObjectWater = false;
             hasObjectFuel = true;
+            bucketFilled = true;
         }
     }
 
