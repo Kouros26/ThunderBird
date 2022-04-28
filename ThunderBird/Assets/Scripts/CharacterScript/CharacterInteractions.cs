@@ -12,7 +12,6 @@ public class CharacterInteractions : MonoBehaviour
     [Header ("Dragon")]
    // ParticleSystem particles;
     private bool dragon;
-    public bool love;
 
     [Header("ResetEngine")] private bool Engine1, Engine2;
 
@@ -25,9 +24,12 @@ public class CharacterInteractions : MonoBehaviour
     private bool pickable, follow;
     public bool hasObject = false;
 
+    public CaressTheDragon caressTheDragonScript;
+
     // Start is called before the first frame update
     void Start()
     {
+        caressTheDragonScript = GameObject.Find("polySurface154").GetComponent<CaressTheDragon>();
        // particles = GetComponent<ParticleSystem>();
         //particles.Stop();
     }
@@ -72,14 +74,18 @@ public class CharacterInteractions : MonoBehaviour
 
     public void Dragon(InputAction.CallbackContext context)
     {
-        if (dragon)
+        bool temp = context.performed;
+
+        if (temp && dragon)
         {
+            caressTheDragonScript.love = true;
+            print(caressTheDragonScript.love);
             Debug.Log("Clique!!!!!!");
-            love = true;
         }
         else
         {
-            love = false;
+            return;
+            //caressTheDragonScript.love = false;
         }
     }
 

@@ -5,46 +5,48 @@ using UnityEngine.InputSystem;
 
 public class CaressTheDragon : MonoBehaviour
 {
-    public ParticleSystem heart;
-    bool dragon = false, love = false;
+    [SerializeField] private ParticleSystem heart;
+    public CharacterMovement characterMovementScript;
+    public EventManagerScript eventManagerScript;
+    //bool dragon = false;
+    public bool love = false;
 
  //   CharacterMovement characterMovementScript;
 
     void Start()
     {
-        heart = GetComponent<ParticleSystem>();
-        heart.Stop();
+        heart = GameObject.Find("Heart").GetComponent<ParticleSystem>();
+        heart.Clear();
+        //heart.Stop();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            characterMovementScript = other.GetComponent<CharacterMovement>();
+        }
+    }
     void FixedUpdate()
 
     {
-        if (love)
+        if (love && !heart.isEmitting)
         {
+            characterMovementScript.paused = true;
             heart.Play();
-        }
-        else
-        {
-            heart.Stop();
+            StartCoroutine(DragonInteraction());
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.tag == "Player")
-    //    {
-    //        characterMovementScript = other.GetComponent<CharacterMovement>();
-    //        characterMovementScript.paused = true;
-    //        //StartSkillCheck
-    //        StartCoroutine(WaitForEndofAction());
-    //        if (love)
-    //        {
-    //            Debug.Log("LOVEACTIVITED");
-    //            heart.Play(includeChildren);
-    //        }
+    IEnumerator DragonInteraction()
+    {
+        yield return new WaitForSeconds(5);
+        characterMovementScript.paused = false;
+        eventManagerScript.DragonFinished();
+        heart.Stop();
+        love = false;
+    }
 
-    //    }
-    //}
 
     //IEnumerator WaitForEndofAction()
     //{

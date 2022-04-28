@@ -12,6 +12,9 @@ public class EventManagerScript : MonoBehaviour
     public GameObject Shake;
     public GameObject Air;
 
+    [SerializeField] private GameObject dragonUI;
+    [SerializeField] private GameObject dragonHitbox;
+ 
     [SerializeField] private GameObject[] doorTriggers;
 
     [SerializeField] private GameObject cam;
@@ -22,7 +25,7 @@ public class EventManagerScript : MonoBehaviour
     bool alreadyFire = true;
     bool alreadyFuel = true;
     public static bool alreadyDoor = false;
-    bool alreadyPet = true;
+    bool alreadyPet = false;
 
     public static bool allDoorsOpen = false;
     public static bool closeCockpit = false;
@@ -34,6 +37,7 @@ public class EventManagerScript : MonoBehaviour
     private void Start()
     {
         camShake = cam.GetComponent<Animator>();
+        dragonHitbox = GameObject.Find("polySurface154");
     }
 
     void Update()
@@ -53,7 +57,7 @@ public class EventManagerScript : MonoBehaviour
         //DEBUG MISSION
         if(Input.GetKeyDown(KeyCode.Y))
         {
-            Turbulences();
+            PetTheDragon();
         }
     }
 
@@ -163,7 +167,8 @@ public class EventManagerScript : MonoBehaviour
         {
             task = false;
             alreadyPet = true;
-
+            dragonUI.SetActive(true);
+            dragonHitbox.GetComponent<BoxCollider>().enabled = true;
         }
 
         else
@@ -187,5 +192,12 @@ public class EventManagerScript : MonoBehaviour
         {
             Fuel();
         }
+    }
+
+    public void DragonFinished()
+    {
+        alreadyPet = false;
+        dragonUI.SetActive(false);
+        dragonHitbox.GetComponent<BoxCollider>().enabled = false;
     }
 }
