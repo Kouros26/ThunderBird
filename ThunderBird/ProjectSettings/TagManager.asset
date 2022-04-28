@@ -13,6 +13,9 @@ TagManager:
   - Water
   - QTE
   - Pumps
+  - TrapOnFirstFloor
+  - TrapOnBasement
+  - Ladder
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,7 @@ public class HandHitbox : MonoBehaviour
     public static bool fuel = false;
     public static bool emptybucket = false;
     public static bool fuelpumps = false;
+    public static bool trapFirstfloor, trapBasement;
 
     public bool OnDoor;
     public bool includeChildren = true;
@@ -70,6 +71,14 @@ public class HandHitbox : MonoBehaviour
             case "Door":
                 OnDoor = true;
                 break;
+
+            case "TrapOnFirstFloor":
+                trapFirstfloor = true;
+                break;
+
+            case "TrapOnBasement":
+                trapBasement = true;
+                break;
         }
     }
 
@@ -113,6 +122,14 @@ public class HandHitbox : MonoBehaviour
 
             case "Door":
                 OnDoor = false;
+                break;
+
+            case "TrapOnFirstFloor":
+                trapFirstfloor = false;
+                break;
+
+            case "TrapOnBasement":
+                trapBasement = false;
                 break;
         }
 

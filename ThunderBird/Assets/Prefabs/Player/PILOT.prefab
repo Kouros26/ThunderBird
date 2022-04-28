@@ -2475,8 +2475,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4691948134359711381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.028, y: 0.997, z: 0.8}
-  m_LocalScale: {x: 1, y: 1.7656, z: 0.4471}
+  m_LocalPosition: {x: -0.028, y: 1.087, z: 0.8}
+  m_LocalScale: {x: 1, y: 1.9455146, z: 0.4471}
   m_Children: []
   m_Father: {fileID: 5086706399543851255}
   m_RootOrder: 4
@@ -3209,6 +3209,7 @@ GameObject:
   - component: {fileID: 342074499380177042}
   - component: {fileID: 9109800051141598578}
   - component: {fileID: 3491129645976537322}
+  - component: {fileID: 4412980066643993300}
   m_Layer: 0
   m_Name: PILOT
   m_TagString: Player
@@ -3298,6 +3299,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4691948135670947621}
         m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
         m_MethodName: OnJoystick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4412980066643993300}
+        m_TargetAssemblyTypeName: LadderTP, Assembly-CSharp
+        m_MethodName: OnJoystickLadder
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3524,6 +3537,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heart: {fileID: 1025553884536577588, guid: 1bb49ecc826e64f47b1d29fbcaabf603, type: 3}
   includeChildren: 1
+--- !u!114 &4412980066643993300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610442977176724045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3244c4b6db25d40a2f932bf4b5211b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chController: {fileID: 5086706399543851255}
+  speedUpDown: 20
+  FPSInput: {fileID: 4691948135670947621}
 --- !u!1 &5658877251104730583
 GameObject:
   m_ObjectHideFlags: 0

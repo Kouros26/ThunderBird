@@ -56,9 +56,8 @@ public class DoorManagement : MonoBehaviour
             }
         }
 
-        else if (isOpen)
-            //DoorClosing();
-            return;
+        //else if (isOpen)
+        //    DoorClosing();
     }
 
     public void DoorClosing()
@@ -66,6 +65,16 @@ public class DoorManagement : MonoBehaviour
         anim.SetTrigger("Close");
         animTwo.SetTrigger("Close");
         isOpen = false;
+
+        LightTwo.SetActive(false);
+        LightOne.SetActive(true);
+        GroundTwo.SetActive(false);
+        GroundOne.SetActive(true);
+
+        TWOLightTwo.SetActive(false);
+        TWOLightOne.SetActive(true);
+        TWOGroundTwo.SetActive(false);
+        TWOGroundOne.SetActive(true);
     }
     private void OnTriggerEnter(Collider other)
     {
