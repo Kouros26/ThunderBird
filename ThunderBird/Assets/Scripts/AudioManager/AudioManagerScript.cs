@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAudioManager : MonoBehaviour
+public class AudioManagerScript : MonoBehaviour
 {
     [Header("General")]
     [SerializeField] private AudioClip airplaneAmbient, thunderStorm;

@@ -34,6 +34,8 @@ public class EventManagerScript : MonoBehaviour
 
     public PlaneStick planeStickScript;
 
+    public AudioManagerScript sceneAudio;
+
     private void Start()
     {
         camShake = cam.GetComponent<Animator>();
@@ -81,6 +83,8 @@ public class EventManagerScript : MonoBehaviour
     }
     void Thunderstorm()
     {
+        sceneAudio.clip = sceneAudio.MainAlarm;
+        sceneAudio.PlayAudio();
         Thunder.SetActive(true);
         Shake.SetActive(false);
         Air.SetActive(false);
@@ -88,6 +92,8 @@ public class EventManagerScript : MonoBehaviour
 
     void Turbulences()
     {
+        sceneAudio.clip = sceneAudio.MainAlarm;
+        sceneAudio.PlayAudio();
         Shake.SetActive(true);
         Thunder.SetActive(false);
         Air.SetActive(false);
@@ -106,6 +112,8 @@ public class EventManagerScript : MonoBehaviour
 
     void Depressurization()
     {
+        sceneAudio.clip = sceneAudio.MainAlarm;
+        sceneAudio.PlayAudio();
         Air.SetActive(true);
         Thunder.SetActive(false);
         Shake.SetActive(false);
@@ -138,7 +146,8 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyFire && !alreadyFuel)
         {
-
+            sceneAudio.clip = sceneAudio.MainAlarm;
+            sceneAudio.PlayAudio();
         }
 
         else
@@ -151,7 +160,8 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyFuel && !alreadyFire)
         {
-
+            sceneAudio.clip = sceneAudio.MainAlarm;
+            sceneAudio.PlayAudio();
         }
 
         else

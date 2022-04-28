@@ -25,6 +25,7 @@ public class CharacterInteractions : MonoBehaviour
     public bool hasObject = false;
     public bool bucketFilled = false;
 
+    public AudioManagerScript sceneAudio; 
     public CaressTheDragon caressTheDragonScript;
 
     // Start is called before the first frame update
@@ -102,6 +103,8 @@ public class CharacterInteractions : MonoBehaviour
             {
                 item.GetComponent<Rigidbody>().useGravity = false;
                 follow = true;
+                sceneAudio.clip = sceneAudio.Grab;
+                sceneAudio.PlayAudio();
                 hasObject = true;
             }
         }
