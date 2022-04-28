@@ -31,7 +31,7 @@ public class CharacterInteractions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        caressTheDragonScript = GameObject.Find("polySurface154").GetComponent<CaressTheDragon>();
+        caressTheDragonScript = GameObject.Find("plaques_chariot").GetComponent<CaressTheDragon>();
     }
 
     void FixedUpdate()

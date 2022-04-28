@@ -6,11 +6,9 @@ public class EventManagerScript : MonoBehaviour
 {
     public bool isEventThunderOn = false;
     public static bool isEventShakeOn = false;
-    public bool isEventAirOn = false;
 
     public GameObject Thunder;
     public GameObject Shake;
-    public GameObject Air;
 
     [SerializeField] private GameObject dragonUI;
     [SerializeField] private GameObject dragonHitbox;
@@ -39,7 +37,7 @@ public class EventManagerScript : MonoBehaviour
     private void Start()
     {
         camShake = cam.GetComponent<Animator>();
-        dragonHitbox = GameObject.Find("polySurface154");
+        dragonHitbox = GameObject.Find("plaques_chariot");
     }
 
     void Update()
@@ -67,7 +65,7 @@ public class EventManagerScript : MonoBehaviour
     {
         int random = Random.Range(40, 91);
         yield return new WaitForSeconds(random);
-        int eventToPerform = Random.Range(1, 4);
+        int eventToPerform = Random.Range(1, 3);
         if(eventToPerform == 1)
         {
             Thunderstorm();
@@ -76,10 +74,6 @@ public class EventManagerScript : MonoBehaviour
         {
             Turbulences();
         }
-        else if(eventToPerform == 3)
-        {
-            Depressurization();
-        }
     }
     void Thunderstorm()
     {
@@ -87,7 +81,6 @@ public class EventManagerScript : MonoBehaviour
         sceneAudio.PlayAudio();
         Thunder.SetActive(true);
         Shake.SetActive(false);
-        Air.SetActive(false);
     }
 
     void Turbulences()
@@ -96,7 +89,6 @@ public class EventManagerScript : MonoBehaviour
         sceneAudio.PlayAudio();
         Shake.SetActive(true);
         Thunder.SetActive(false);
-        Air.SetActive(false);
         planeStickScript.shakingEvent = true;
         camShake.SetBool("Shake", true);
         StartCoroutine(ShakingEvent());
@@ -107,15 +99,6 @@ public class EventManagerScript : MonoBehaviour
         yield return new WaitForSeconds(40);
         planeStickScript.shakingEvent = false;
         camShake.SetBool("Shake", false);
-        Shake.SetActive(false);
-    }
-
-    void Depressurization()
-    {
-        sceneAudio.clip = sceneAudio.MainAlarm;
-        sceneAudio.PlayAudio();
-        Air.SetActive(true);
-        Thunder.SetActive(false);
         Shake.SetActive(false);
     }
 

@@ -21,15 +21,15 @@ public class EventScript : MonoBehaviour
 
     private void Start()
     {
-        Engine = GameObject.Find("Moteur");
-        PopUpFuel = GameObject.Find("PopUpFuel");
+        //Engine = GameObject.Find("Moteur");
+        //PopUpFuel = GameObject.Find("PopUpFuel");
 
-        Cockpit1 = GameObject.Find("Siege_39_low");
-        Cockpit2 = GameObject.Find("Siege_39_low 1");
+        Cockpit1 = GameObject.Find("Chaise_g_1");
+        Cockpit2 = GameObject.Find("Chaise_g_1 1");
         PopUpCockpit = GameObject.Find("PopUpCockpit");
 
-        Switch = GameObject.Find("Switch");
-        PopUpSwitch = GameObject.Find("PopUpSwitch");
+        //Switch = GameObject.Find("Switch");
+        //PopUpSwitch = GameObject.Find("PopUpSwitch");
     }
 
     #region CockpitMission
