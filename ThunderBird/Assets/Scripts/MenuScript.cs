@@ -5,16 +5,19 @@ using UnityEngine;
 
 public class MenuScript : MonoBehaviour
 {
-    public Animator ticket;
 
     private void Start()
     {
-        ticket = GetComponent<Animator>();
     }
     public void PlayGame()
     {
+       StartCoroutine(play());
+    }
+
+    IEnumerator play()
+    {
+        yield return new WaitForSeconds(1);   
         Debug.Log("Play");
-        ticket.SetTrigger("play");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
