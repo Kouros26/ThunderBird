@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.LowLevel;
+using UnityEngine.SceneManagement;
 
 public class PlaneStick : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class PlaneStick : MonoBehaviour
     public GameObject consoleLights;
     public GameObject warningLights;
 
-    private float x, y;
+    private static float x, y;
 
     void Start()
     {
@@ -59,8 +60,11 @@ public class PlaneStick : MonoBehaviour
         Altitude -= x * x * Time.deltaTime;
         Altitude = Mathf.RoundToInt(Altitude);
 
-        if (Altitude <= 0)
+        if (Altitude < 0)
+        {
             Altitude = 0;
+            SceneManager.LoadScene(2);
+        }
         if (Altitude <= 12000)
         {
            if(!once)
@@ -88,6 +92,7 @@ public class PlaneStick : MonoBehaviour
     public static void Punishment()
     {
         Altitude = Altitude - 1000;
+        y = 0;
     }
     IEnumerator ClaMerde()
     {

@@ -14,8 +14,9 @@ public class DoorManagement : MonoBehaviour
 
     private Animator anim, animTwo;
 
-    private bool isOpen;
+    private bool isOpen = false;
     public Spawning spawningScript;
+    //public PlayerJoin playerScript;
     static int doorCount;
 
     public AudioManagerScript sceneAudio;
@@ -40,6 +41,8 @@ public class DoorManagement : MonoBehaviour
         PlayerOne = spawningScript.players[0].GetComponentInChildren<HandHitbox>().OnDoor;
         PlayerTwo = spawningScript.players[1].GetComponentInChildren<HandHitbox>().OnDoor;
 
+        print(PlayerOne);
+        print(PlayerTwo);
         if (PlayerOne && PlayerTwo && ThatDoor)
         {
             if (!isOpen)

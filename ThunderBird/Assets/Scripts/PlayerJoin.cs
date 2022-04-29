@@ -8,7 +8,7 @@ public class PlayerJoin : MonoBehaviour
     PlayerInputManager manager;
 
     public Transform[] spawnLocations;
-    //public GameObject[] players = new GameObject[2];
+    public GameObject[] players = new GameObject[2];
     private int nbr = 0;
 
     void Start() 

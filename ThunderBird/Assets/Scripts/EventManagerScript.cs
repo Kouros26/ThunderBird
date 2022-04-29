@@ -74,8 +74,8 @@ public class EventManagerScript : MonoBehaviour
         //DEBUG MISSION
         if(Input.GetKeyDown(KeyCode.Y))
         {
-            //Thunderstorm();
-            Turbulences();
+            Thunderstorm();
+            //Turbulences();
         }
     }
 
@@ -156,6 +156,7 @@ public class EventManagerScript : MonoBehaviour
 
     void Turbulences()
     {
+        //isEventShakeOn = true;
         AudioManagerScript.clip = sceneAudio.MainAlarm;
         AudioManagerScript.PlayAudio();
         Shake.SetActive(true);
@@ -171,6 +172,7 @@ public class EventManagerScript : MonoBehaviour
         planeStickScript.shakingEvent = false;
         camShake.SetBool("Shake", false);
         Shake.SetActive(false);
+        //isEventShakeOn = false;
         specialTask = false;
     }
 
