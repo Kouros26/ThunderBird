@@ -17,13 +17,14 @@ public class ButtonMash : MonoBehaviour
     void Start()
     {
         mash = mashDelay;
-        GameObject temp = GameObject.Find("ButtonSmashed");
-        _text = temp.GetComponent<Text>();
+        //GameObject temp = GameObject.Find("ButtonSmashed");
+        //_text = temp.GetComponent<Text>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
+        print("bob");
         mash -= Time.deltaTime;
         timer += Time.deltaTime;
 
@@ -32,7 +33,7 @@ public class ButtonMash : MonoBehaviour
             mash = mashDelay;
             timer = 0;
             nbr++;
-            _text.text = "SMASH X !";
+            //_text.text = "SMASH X !";
         }
 
         //Debug.Log(timer);
@@ -40,7 +41,7 @@ public class ButtonMash : MonoBehaviour
         {
             PlaneStick.Punishment();
             timer = 0;
-            _text.text = "OUCH !";
+            //_text.text = "OUCH !";
         }
     }
 

@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.HID;
 
 public class CharacterInteractions : MonoBehaviour
 {
     public static bool interacting;
     [SerializeField] private bool interactible = HandHitbox.interactible;
     [SerializeField] private rumble rumble;
+    public ButtonMash button;
     private bool PlayerOne, PlayerTwo;
 
     [Header ("Dragon")]
@@ -61,9 +63,19 @@ public class CharacterInteractions : MonoBehaviour
     void Update()
     {
         Setup();
-        if (!interacting) return;
+        if (!interacting || !EventScript.isOccupied)
+        {
+            button.enabled = false;
+        };
         if (CharacterMovement.moving)
             interacting = false; HandHitbox.interactible = false;
+
+        if (interacting || EventScript.isOccupied)
+        {
+            button.enabled = true;
+            button.Update();
+        }
+
         
 
     }
