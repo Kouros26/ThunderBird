@@ -37,6 +37,12 @@ public class PlaneStick : MonoBehaviour
                 if (Altitude >= AltitudeMax)
                     Altitude = AltitudeMax;
 
+                if (Altitude < 0)
+                {
+                    Altitude = 0;
+                    SceneManager.LoadScene(2);
+                }
+
                 return;
             }
         }
@@ -91,7 +97,7 @@ public class PlaneStick : MonoBehaviour
 
     public static void Punishment()
     {
-        Altitude = Altitude - 1000;
+        Altitude = Altitude - 5000;
         y = 0;
     }
     IEnumerator ClaMerde()

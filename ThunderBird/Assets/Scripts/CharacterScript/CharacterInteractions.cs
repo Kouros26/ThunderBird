@@ -94,11 +94,14 @@ public class CharacterInteractions : MonoBehaviour
     {
         bool temp = context.performed;
 
-        if (temp && dragon)
+        if (temp && dragon && eventManagerScript.alreadyPet)
         {
+            //dragon = false;
+            //HandHitbox.dragon = false;
             caressTheDragonScript.love = true;
             print(caressTheDragonScript.love);
-            Debug.Log("Clique!!!!!!");
+
+            //Debug.Log("Clique!!!!!!");
         }
         else
         {

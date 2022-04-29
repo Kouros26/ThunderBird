@@ -16,9 +16,8 @@ public class MenuScript : MonoBehaviour
 
     IEnumerator play()
     {
-        yield return new WaitForSeconds(1);   
-        Debug.Log("Play");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(1);
 
     }
     public void QuitGame()

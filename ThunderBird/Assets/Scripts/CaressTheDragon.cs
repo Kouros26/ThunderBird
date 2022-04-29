@@ -11,12 +11,14 @@ public class CaressTheDragon : MonoBehaviour
     Animator animDebug;
     //bool dragon = false;
     public bool love = false;
+    //[SerializeField] private GameObject dragonHitbox;
 
- //   CharacterMovement characterMovementScript;
+    //   CharacterMovement characterMovementScript;
 
     void Start()
     {
         heart = GameObject.Find("Heart").GetComponent<ParticleSystem>();
+        //dragonHitbox = GameObject.Find("plaques_chariot");
         heart.Clear();
     }
 
@@ -54,6 +56,7 @@ public class CaressTheDragon : MonoBehaviour
         if (other.tag == "Player")
         {
             characterMovementScript = null;
+            //dragonHitbox.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }

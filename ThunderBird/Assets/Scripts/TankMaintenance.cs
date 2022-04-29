@@ -11,7 +11,7 @@ public class TankMaintenance : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         characterInteractionsScript = other.GetComponent<CharacterInteractions>();
-        if(other.tag == "Player")
+        if(other.tag == "Player" && eventManagerScript.requirement != 0)
         {
             if (eventManagerScript.waterRequired)
             {

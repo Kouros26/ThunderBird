@@ -11,7 +11,7 @@ public class EventManagerScript : MonoBehaviour
     public GameObject Shake;
 
     [SerializeField] private GameObject dragonUI;
-    [SerializeField] private GameObject dragonHitbox;
+    //[SerializeField] private GameObject dragonHitbox;
  
     [SerializeField] private GameObject[] doorTriggers;
 
@@ -23,7 +23,7 @@ public class EventManagerScript : MonoBehaviour
     bool alreadyFire = false;
     bool alreadyFuel = false;
     public static bool alreadyDoor = false;
-    bool alreadyPet = false;
+    public bool alreadyPet = false;
     public bool thunderResolved = false;
 
     public static bool allDoorsOpen = false;
@@ -48,13 +48,15 @@ public class EventManagerScript : MonoBehaviour
     public int requirement = 0;
     public GameObject water;
     public GameObject fuel;
+    bool startedTime;
+    float timer;
 
     public AudioManagerScript sceneAudio;
 
     private void Start()
     {
         camShake = cam.GetComponent<Animator>();
-        dragonHitbox = GameObject.Find("plaques_chariot");
+        //dragonHitbox = GameObject.Find("plaques_chariot");
     }
 
     void Update()
@@ -74,8 +76,20 @@ public class EventManagerScript : MonoBehaviour
         //DEBUG MISSION
         if(Input.GetKeyDown(KeyCode.Y))
         {
-            Thunderstorm();
+            //Thunderstorm();
             //Turbulences();
+            PetTheDragon();
+        }
+
+        if(startedTime)
+        {
+            timer += Time.deltaTime;
+            if(timer > 15)
+            {
+                PlaneStick.Punishment();
+                startedTime = false;
+                timer = 0;
+            }
         }
     }
 
@@ -108,7 +122,8 @@ public class EventManagerScript : MonoBehaviour
     {
         AudioManagerScript.clip = sceneAudio.Switch;
         AudioManagerScript.PlayAudio();
-
+        startedTime = false;
+        timer = 0;
         isEventThunderOn = false;
         Thunder.SetActive(false);
         normalLights.SetActive(true);
@@ -152,6 +167,9 @@ public class EventManagerScript : MonoBehaviour
         unplugged.SetActive(true);
         altitude.SetActive(false);
         engineTrigger.SetActive(true);
+        startedTime = true;
+        //StartCoroutine(BlackoutTime());
+
     }
 
     void Turbulences()
@@ -178,7 +196,7 @@ public class EventManagerScript : MonoBehaviour
 
     IEnumerator WaitForMission()
     {
-        int random = Random.Range(20, 61);
+        int random = Random.Range(10, 26);
         yield return new WaitForSeconds(random);
         int mission = Random.Range(1, 5);
         if(mission == 1)
@@ -210,6 +228,8 @@ public class EventManagerScript : MonoBehaviour
             fireUI.SetActive(true);
             tankTrigger.SetActive(true);
             waterRequired = true;
+            startedTime = true;
+            //StartCoroutine(FireTime());
         }
 
         else
@@ -229,6 +249,8 @@ public class EventManagerScript : MonoBehaviour
             fuelUI.SetActive(true);
             tankTrigger.SetActive(true);
             fuelRequired = true;
+            startedTime = true;
+            //StartCoroutine(FuelTime());
         }
 
         else
@@ -247,7 +269,8 @@ public class EventManagerScript : MonoBehaviour
             AudioManagerScript.clip = sceneAudio.DragonNotContent;
             AudioManagerScript.PlayAudio();
             dragonUI.SetActive(true);
-            dragonHitbox.GetComponent<BoxCollider>().enabled = true;
+            startedTime = true;
+            //StartCoroutine(DragonTime());
         }
 
         else
@@ -279,7 +302,8 @@ public class EventManagerScript : MonoBehaviour
         dragonUI.SetActive(false);
         AudioManagerScript.clip = sceneAudio.DragonContent;
         AudioManagerScript.PlayAudio();
-        dragonHitbox.GetComponent<BoxCollider>().enabled = false;
+        startedTime = false;
+        timer = 0;
     }
 
     public void FireExtinguished()
@@ -288,6 +312,9 @@ public class EventManagerScript : MonoBehaviour
         tankTrigger.SetActive(false);
         waterRequired = false;
         alreadyFire = false;
+        startedTime = false;
+        timer = 0;
+        AudioManagerScript.audioPlane.Stop();
     }
 
     public void FuelReplenished()
@@ -296,6 +323,8 @@ public class EventManagerScript : MonoBehaviour
         tankTrigger.SetActive(false);
         fuelRequired = false;
         alreadyFuel = false;
+        startedTime = false;
+        timer = 0;
     }
 
     public void Fill()
@@ -314,4 +343,44 @@ public class EventManagerScript : MonoBehaviour
             water.SetActive(false);
         }
     }
+
+    //IEnumerator FireTime()
+    //{
+    //    yield return new WaitForSeconds(15);
+    //    if(waterRequired == true)
+    //    {
+    //        PlaneStick.Punishment();
+    //        FireExtinguished();
+    //    }
+    //}
+
+    //IEnumerator FuelTime()
+    //{
+    //    yield return new WaitForSeconds(15);
+    //    if (fuelRequired == true)
+    //    {
+    //        PlaneStick.Punishment();
+    //        FuelReplenished();
+    //    }
+    //}
+
+    //IEnumerator DragonTime()
+    //{
+    //    yield return new WaitForSeconds(15);
+    //    if (alreadyPet == true)
+    //    {
+    //        PlaneStick.Punishment();
+    //        DragonFinished();
+    //    }
+    //}
+
+    //IEnumerator BlackoutTime()
+    //{
+    //    yield return new WaitForSeconds(10);
+    //    if (isEventThunderOn == true)
+    //    {
+    //        PlaneStick.Punishment();
+    //        CheckForThunderFinish();
+    //    }
+    //}
 }
