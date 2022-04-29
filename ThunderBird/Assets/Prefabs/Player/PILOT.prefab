@@ -3546,7 +3546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chController: {fileID: 5086706399543851255}
-  speedUpDown: 20
+  speedUpDown: 5
   FPSInput: {fileID: 4691948135670947621}
 --- !u!114 &2247506740926544332
 MonoBehaviour:

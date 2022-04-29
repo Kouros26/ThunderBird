@@ -74,7 +74,8 @@ public class EventManagerScript : MonoBehaviour
         //DEBUG MISSION
         if(Input.GetKeyDown(KeyCode.Y))
         {
-            Thunderstorm();
+            //Thunderstorm();
+            Turbulences();
         }
     }
 
@@ -241,6 +242,8 @@ public class EventManagerScript : MonoBehaviour
         {
             task = false;
             alreadyPet = true;
+            AudioManagerScript.clip = sceneAudio.DragonContent;
+            AudioManagerScript.PlayAudio();
             dragonUI.SetActive(true);
             dragonHitbox.GetComponent<BoxCollider>().enabled = true;
         }
@@ -272,6 +275,8 @@ public class EventManagerScript : MonoBehaviour
     {
         alreadyPet = false;
         dragonUI.SetActive(false);
+        AudioManagerScript.clip = sceneAudio.DragonNotContent;
+        AudioManagerScript.PlayAudio();
         dragonHitbox.GetComponent<BoxCollider>().enabled = false;
     }
 
