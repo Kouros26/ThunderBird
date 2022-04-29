@@ -28,7 +28,7 @@ public class MenuScript : MonoBehaviour
 
     public void ReturnMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(0);
     }
 
 }
