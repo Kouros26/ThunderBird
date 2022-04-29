@@ -3226,6 +3226,7 @@ GameObject:
   - component: {fileID: 9109800051141598578}
   - component: {fileID: 4412980066643993300}
   - component: {fileID: 2247506740926544332}
+  - component: {fileID: 5932724213438215813}
   m_Layer: 0
   m_Name: PILOT
   m_TagString: Player
@@ -3378,13 +3379,13 @@ MonoBehaviour:
     m_ActionName: Controller/Interaction[/XInputControllerWindows/buttonSouth,/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 5932724213438215813}
+        m_TargetAssemblyTypeName: ButtonMash, Assembly-CSharp
+        m_MethodName: OnButton
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3463,6 +3464,8 @@ MonoBehaviour:
   playerHands: {fileID: 4691948134359711381}
   item: {fileID: 0}
   hasObject: 0
+  bucketFilled: 0
+  sceneAudio: {fileID: 0}
   caressTheDragonScript: {fileID: 0}
 --- !u!114 &4691948135670947621
 MonoBehaviour:
@@ -3556,6 +3559,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e3ecd4833f2bb4d83a38ddd759a06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5932724213438215813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610442977176724045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 926e6242831b943459b06a4c4f51ff8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mashDelay: 0.5
+  pressed: 0
 --- !u!1 &5658877251104730583
 GameObject:
   m_ObjectHideFlags: 0
