@@ -33,7 +33,7 @@ public class ResetEngine : MonoBehaviour
 
         if (PlayerOne && PlayerTwo && OnEngine)
         {
-            Debug.Log("Can Reset Engine");
+            //Debug.Log("Can Reset Engine");
             eventManagerScript.CheckForThunderFinish();
         }
 
@@ -49,9 +49,6 @@ public class ResetEngine : MonoBehaviour
             if (PlayersOnEngine[0] == true && PlayersOnEngine[1] == true)
                 OnEngine = true;
             Debug.Log(PlayersOnEngine[0] + "," + PlayersOnEngine[1]);
-            Debug.Log(PlayerOne);
-            Debug.Log(PlayerTwo);
-            Debug.Log(OnEngine);
 
         }
     }

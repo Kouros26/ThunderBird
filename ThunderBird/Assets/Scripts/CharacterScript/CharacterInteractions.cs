@@ -28,13 +28,17 @@ public class CharacterInteractions : MonoBehaviour
 
     public AudioManagerScript sceneAudio; 
     public CaressTheDragon caressTheDragonScript;
-    public GameObject engineTriggers;
+    public EventManagerScript eventManagerScript;
+    public static bool fillWater;
+    public static bool fillFuel;
+
 
     // Start is called before the first frame update
     void Start()
     {
         sceneAudio = GameObject.Find("AudioManager").GetComponent<AudioManagerScript>();
         caressTheDragonScript = GameObject.Find("plaques_chariot").GetComponent<CaressTheDragon>();
+        eventManagerScript = GameObject.Find("SCENE").GetComponent<EventManagerScript>();
     }
 
     void FixedUpdate()
@@ -54,7 +58,6 @@ public class CharacterInteractions : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         Setup();
@@ -116,12 +119,7 @@ public class CharacterInteractions : MonoBehaviour
 
         else
         {
-            item.GetComponent<Rigidbody>().useGravity = true;
-            follow = false;
-            hasObject = false;
-            bucketFilled = false;
-            hasObjectWater = false;
-            hasObjectFuel = false;
+            Drop();
         }
     }
 
@@ -132,6 +130,9 @@ public class CharacterInteractions : MonoBehaviour
             Debug.Log("L'eau c'est la vie meme dans un sceau");
             hasObjectWater = true;
             bucketFilled = true;
+            fillWater = true;
+            eventManagerScript.Fill();
+            eventManagerScript.requirement = 1;
             //hasObjectFuel = false;
         }
     }
@@ -143,6 +144,9 @@ public class CharacterInteractions : MonoBehaviour
             //hasObjectWater = false;
             hasObjectFuel = true;
             bucketFilled = true;
+            fillFuel = true;
+            eventManagerScript.Fill();
+            eventManagerScript.requirement = 2;
         }
     }
 
@@ -161,5 +165,19 @@ public class CharacterInteractions : MonoBehaviour
         BucketFuel = HandHitbox.BucketFuel;
         BucketEmpty = HandHitbox.BucketEmpty;
         fuelpumps = HandHitbox.fuelpumps;
+    }
+
+    public void Drop()
+    {
+        item.GetComponent<Rigidbody>().useGravity = true;
+        follow = false;
+        hasObject = false;
+        bucketFilled = false;
+        hasObjectWater = false;
+        hasObjectFuel = false;
+        eventManagerScript.requirement = 0;
+        fillWater = false;
+        fillFuel = false;
+        eventManagerScript.Fill();
     }
 }

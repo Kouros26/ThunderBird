@@ -20,8 +20,8 @@ public class EventManagerScript : MonoBehaviour
 
     bool specialTask = false;
     public static bool task = false;
-    bool alreadyFire = true;
-    bool alreadyFuel = true;
+    bool alreadyFire = false;
+    bool alreadyFuel = false;
     public static bool alreadyDoor = false;
     bool alreadyPet = false;
     public bool thunderResolved = false;
@@ -42,6 +42,12 @@ public class EventManagerScript : MonoBehaviour
 
     public GameObject fireUI;
     public GameObject fuelUI;
+    public GameObject tankTrigger;
+    public bool waterRequired = false;
+    public bool fuelRequired = false;
+    public int requirement = 0;
+    public GameObject water;
+    public GameObject fuel;
 
     public AudioManagerScript sceneAudio;
 
@@ -74,15 +80,15 @@ public class EventManagerScript : MonoBehaviour
 
     IEnumerator WaitForSpecialMission()
     {
-        int random = Random.Range(40, 91);
+        int random = Random.Range(60, 121);
         yield return new WaitForSeconds(random);
         int eventToPerform = Random.Range(1, 3);
-        if(eventToPerform == 1 && isEventThunderOn)
+        if(eventToPerform == 1 && !isEventThunderOn)
         {
             isEventThunderOn = true;
             Thunderstorm();
         }
-        else if(eventToPerform == 2)
+        if(eventToPerform == 2)
         {
             Turbulences();
         }
@@ -91,7 +97,6 @@ public class EventManagerScript : MonoBehaviour
     {
         StartCoroutine(StopLightning());
         AudioManagerScript.clip = sceneAudio.ThunderClap;
-        AudioManagerScript.audioPlane.volume = 0.5f;
         AudioManagerScript.PlayAudio();
         StartCoroutine(AfterLightningActivate());
         Thunder.SetActive(true);
@@ -101,7 +106,6 @@ public class EventManagerScript : MonoBehaviour
     public void CheckForThunderFinish()
     {
         AudioManagerScript.clip = sceneAudio.Switch;
-        AudioManagerScript.audioPlane.volume = 0.8f;
         AudioManagerScript.PlayAudio();
 
         isEventThunderOn = false;
@@ -140,7 +144,6 @@ public class EventManagerScript : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         AudioManagerScript.clip = sceneAudio.BlackOut;
-        AudioManagerScript.audioPlane.volume = 1;
         AudioManagerScript.PlayAudio();
         normalLights.SetActive(false);
         lightsOut.SetActive(true);
@@ -153,7 +156,6 @@ public class EventManagerScript : MonoBehaviour
     void Turbulences()
     {
         AudioManagerScript.clip = sceneAudio.MainAlarm;
-        AudioManagerScript.audioPlane.volume = 0.2f;
         AudioManagerScript.PlayAudio();
         Shake.SetActive(true);
         Thunder.SetActive(false);
@@ -173,7 +175,7 @@ public class EventManagerScript : MonoBehaviour
 
     IEnumerator WaitForMission()
     {
-        int random = Random.Range(8, 17);
+        int random = Random.Range(20, 61);
         yield return new WaitForSeconds(random);
         int mission = Random.Range(1, 5);
         if(mission == 1)
@@ -198,10 +200,13 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyFire && !alreadyFuel)
         {
+            alreadyFire = true;
+            task = false;
             AudioManagerScript.clip = sceneAudio.FireSoundEffect;
-            AudioManagerScript.audioPlane.volume = 0.4f;
             AudioManagerScript.PlayAudio();
             fireUI.SetActive(true);
+            tankTrigger.SetActive(true);
+            waterRequired = true;
         }
 
         else
@@ -214,10 +219,13 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyFuel && !alreadyFire)
         {
+            alreadyFuel = true;
+            task = false;
             AudioManagerScript.clip = sceneAudio.LowFuel;
-            AudioManagerScript.audioPlane.volume = 0.8f;
             AudioManagerScript.PlayAudio();
             fuelUI.SetActive(true);
+            tankTrigger.SetActive(true);
+            fuelRequired = true;
         }
 
         else
@@ -265,5 +273,40 @@ public class EventManagerScript : MonoBehaviour
         alreadyPet = false;
         dragonUI.SetActive(false);
         dragonHitbox.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    public void FireExtinguished()
+    {
+        fireUI.SetActive(false);
+        tankTrigger.SetActive(false);
+        waterRequired = false;
+        alreadyFire = false;
+    }
+
+    public void FuelReplenished()
+    {
+        fuelUI.SetActive(false);
+        tankTrigger.SetActive(false);
+        fuelRequired = false;
+        alreadyFuel = false;
+    }
+
+    public void Fill()
+    {
+        print(CharacterInteractions.fillFuel);
+        print(CharacterInteractions.fillWater);
+        if (CharacterInteractions.fillFuel)
+        {
+            fuel.SetActive(true);
+        }
+        if(CharacterInteractions.fillWater)
+        {
+            water.SetActive(true);
+        }
+        else
+        {
+            fuel.SetActive(false);
+            water.SetActive(false);
+        }
     }
 }

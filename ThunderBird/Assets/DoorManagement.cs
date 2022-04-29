@@ -18,6 +18,8 @@ public class DoorManagement : MonoBehaviour
     public Spawning spawningScript;
     static int doorCount;
 
+    public AudioManagerScript sceneAudio;
+
     private List<bool> PlayersOnDoor = new List<bool>();
 
     void Start()
@@ -25,6 +27,7 @@ public class DoorManagement : MonoBehaviour
         doorCount = 0;
         anim = obj.GetComponent<Animator>();
         animTwo = objTwo.GetComponent<Animator>();
+        sceneAudio = GameObject.Find("AudioManager").GetComponent<AudioManagerScript>();
     }
 
     void Update()
@@ -44,6 +47,8 @@ public class DoorManagement : MonoBehaviour
                 anim.SetTrigger("Open");
                 animTwo.SetTrigger("Open");
                 isOpen = true;
+                AudioManagerScript.clip = sceneAudio.DoorOpen;
+                AudioManagerScript.PlayAudio();
                 doorCount = doorCount + 1;
 
                 doorUI.SetActive(false);
@@ -73,6 +78,8 @@ public class DoorManagement : MonoBehaviour
         anim.SetTrigger("Close");
         animTwo.SetTrigger("Close");
         isOpen = false;
+        AudioManagerScript.clip = sceneAudio.DoorClose;
+        AudioManagerScript.PlayAudio();
 
         doorUI.SetActive(true);
         LightTwo.SetActive(false);

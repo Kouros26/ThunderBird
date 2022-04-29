@@ -18,7 +18,6 @@ public class CaressTheDragon : MonoBehaviour
     {
         heart = GameObject.Find("Heart").GetComponent<ParticleSystem>();
         heart.Clear();
-        //heart.Stop();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,13 +48,6 @@ public class CaressTheDragon : MonoBehaviour
         heart.Stop();
         love = false;
     }
-
-
-    //IEnumerator WaitForEndofAction()
-    //{
-    //    yield return new WaitForSeconds(3.5f);
-    //    characterMovementScript.paused = false;
-    //}
 
     private void OnTriggerExit(Collider other)
     {

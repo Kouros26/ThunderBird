@@ -23,7 +23,6 @@ public class Turbulences : MonoBehaviour
             player = other.GetComponent<Transform>();
             player.transform.position = coPilot.transform.position;
             AudioManagerScript.clip = sceneAudio.FastenSeatBell;
-            AudioManagerScript.audioPlane.volume = 0.65f;
             AudioManagerScript.PlayAudio();
             player.transform.LookAt(coPilotView);
             playerAnim = other.GetComponent<Animator>();

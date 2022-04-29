@@ -2876,11 +2876,11 @@ SkinnedMeshRenderer:
   - {fileID: -7765929332773663383, guid: 6788a85ae72196b4c94ad911e982cad6, type: 3}
   - {fileID: -7159131852830273843, guid: 6788a85ae72196b4c94ad911e982cad6, type: 3}
   - {fileID: 7270731297456183480, guid: 6788a85ae72196b4c94ad911e982cad6, type: 3}
-  - {fileID: -4106270175409615937, guid: 6788a85ae72196b4c94ad911e982cad6, type: 3}
-  - {fileID: 3691236737003046703, guid: 6788a85ae72196b4c94ad911e982cad6, type: 3}
-  - {fileID: -8289503760152569490, guid: 6788a85ae72196b4c94ad911e982cad6, type: 3}
-  - {fileID: 2245850199737330621, guid: 6788a85ae72196b4c94ad911e982cad6, type: 3}
-  - {fileID: 6952909313460736902, guid: 6788a85ae72196b4c94ad911e982cad6, type: 3}
+  - {fileID: 2100000, guid: 6fda0187289fa234e8040f39093e503e, type: 2}
+  - {fileID: 2100000, guid: f8df3e9e7bf2e5c42a15b83914df8a1e, type: 2}
+  - {fileID: 2100000, guid: 6fda0187289fa234e8040f39093e503e, type: 2}
+  - {fileID: 2100000, guid: f8df3e9e7bf2e5c42a15b83914df8a1e, type: 2}
+  - {fileID: 2100000, guid: 6fda0187289fa234e8040f39093e503e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3467,6 +3467,7 @@ MonoBehaviour:
   bucketFilled: 0
   sceneAudio: {fileID: 0}
   caressTheDragonScript: {fileID: 0}
+  eventManagerScript: {fileID: 0}
 --- !u!114 &4691948135670947621
 MonoBehaviour:
   m_ObjectHideFlags: 0
