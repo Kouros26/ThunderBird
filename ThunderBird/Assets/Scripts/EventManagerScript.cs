@@ -40,6 +40,9 @@ public class EventManagerScript : MonoBehaviour
     public GameObject altitude;
     public GameObject engineTrigger;
 
+    public GameObject fireUI;
+    public GameObject fuelUI;
+
     public AudioManagerScript sceneAudio;
 
     private void Start()
@@ -195,8 +198,10 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyFire && !alreadyFuel)
         {
-            AudioManagerScript.clip = sceneAudio.MainAlarm;
+            AudioManagerScript.clip = sceneAudio.FireSoundEffect;
+            AudioManagerScript.audioPlane.volume = 0.4f;
             AudioManagerScript.PlayAudio();
+            fireUI.SetActive(true);
         }
 
         else
@@ -209,8 +214,10 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyFuel && !alreadyFire)
         {
-            AudioManagerScript.clip = sceneAudio.MainAlarm;
+            AudioManagerScript.clip = sceneAudio.LowFuel;
+            AudioManagerScript.audioPlane.volume = 0.8f;
             AudioManagerScript.PlayAudio();
+            fuelUI.SetActive(true);
         }
 
         else

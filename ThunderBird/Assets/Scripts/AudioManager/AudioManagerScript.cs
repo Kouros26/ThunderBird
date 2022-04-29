@@ -12,7 +12,7 @@ public class AudioManagerScript : MonoBehaviour
 
     [Header("Event/Mission")]
     [SerializeField] private AudioClip airplaneAlarmGeneral, airplaneFreeFall, airplaneTurbulence, fastenSeatBelt, blackout, doorClose, doorOpen;
-    [SerializeField] private AudioClip dragonContent, dragonNotContent, essenceFilling, fireSoundEffect, leverSwitch, thunderClap;
+    [SerializeField] private AudioClip dragonContent, dragonNotContent, essenceFilling, fireSoundEffect, leverSwitch, thunderClap, lowFuel;
 
     public AudioClip MainAlarm { get => airplaneAlarmGeneral; }
     public AudioClip AmbientSound { get => airplaneAmbient; }
@@ -31,6 +31,8 @@ public class AudioManagerScript : MonoBehaviour
     public AudioClip Switch { get => leverSwitch; }
     public AudioClip ThunderClap { get => thunderClap; }
     public AudioClip ThunderStorm { get => thunderStorm; }
+    
+    public AudioClip LowFuel { get => lowFuel; }
 
     public static AudioSource audioPlane;
     public static AudioClip clip;

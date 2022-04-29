@@ -33,6 +33,7 @@ public class CharacterInteractions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sceneAudio = GameObject.Find("AudioManager").GetComponent<AudioManagerScript>();
         caressTheDragonScript = GameObject.Find("plaques_chariot").GetComponent<CaressTheDragon>();
     }
 
