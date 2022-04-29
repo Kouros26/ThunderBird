@@ -12,6 +12,8 @@ public class Turbulences : MonoBehaviour
 
     Animator playerAnim;
 
+    public AudioManagerScript sceneAudio;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -20,6 +22,9 @@ public class Turbulences : MonoBehaviour
             coPilotReady = true;
             player = other.GetComponent<Transform>();
             player.transform.position = coPilot.transform.position;
+            AudioManagerScript.clip = sceneAudio.FastenSeatBell;
+            AudioManagerScript.audioPlane.volume = 0.65f;
+            AudioManagerScript.PlayAudio();
             player.transform.LookAt(coPilotView);
             playerAnim = other.GetComponent<Animator>();
             playerAnim.SetBool("Sit", true);

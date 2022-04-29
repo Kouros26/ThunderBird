@@ -24,6 +24,7 @@ public class EventManagerScript : MonoBehaviour
     bool alreadyFuel = true;
     public static bool alreadyDoor = false;
     bool alreadyPet = false;
+    public bool thunderResolved = false;
 
     public static bool allDoorsOpen = false;
     public static bool closeCockpit = false;
@@ -31,6 +32,13 @@ public class EventManagerScript : MonoBehaviour
     public static bool closeEngine = false;
 
     public PlaneStick planeStickScript;
+    public GameObject Eclair;
+    public GameObject normalLights;
+    public GameObject lightsOut;
+    public GameObject powerOutUI;
+    public GameObject unplugged;
+    public GameObject altitude;
+    public GameObject engineTrigger;
 
     public AudioManagerScript sceneAudio;
 
@@ -57,7 +65,7 @@ public class EventManagerScript : MonoBehaviour
         //DEBUG MISSION
         if(Input.GetKeyDown(KeyCode.Y))
         {
-            Turbulences();
+            Thunderstorm();
         }
     }
 
@@ -66,8 +74,9 @@ public class EventManagerScript : MonoBehaviour
         int random = Random.Range(40, 91);
         yield return new WaitForSeconds(random);
         int eventToPerform = Random.Range(1, 3);
-        if(eventToPerform == 1)
+        if(eventToPerform == 1 && isEventThunderOn)
         {
+            isEventThunderOn = true;
             Thunderstorm();
         }
         else if(eventToPerform == 2)
@@ -77,16 +86,72 @@ public class EventManagerScript : MonoBehaviour
     }
     void Thunderstorm()
     {
-        sceneAudio.clip = sceneAudio.MainAlarm;
-        sceneAudio.PlayAudio();
+        StartCoroutine(StopLightning());
+        AudioManagerScript.clip = sceneAudio.ThunderClap;
+        AudioManagerScript.audioPlane.volume = 0.5f;
+        AudioManagerScript.PlayAudio();
+        StartCoroutine(AfterLightningActivate());
         Thunder.SetActive(true);
-        Shake.SetActive(false);
+        specialTask = false;
+    }
+
+    public void CheckForThunderFinish()
+    {
+        AudioManagerScript.clip = sceneAudio.Switch;
+        AudioManagerScript.audioPlane.volume = 0.8f;
+        AudioManagerScript.PlayAudio();
+
+        isEventThunderOn = false;
+        Thunder.SetActive(false);
+        normalLights.SetActive(true);
+        lightsOut.SetActive(false);
+        powerOutUI.SetActive(false);
+        unplugged.SetActive(false);
+        altitude.SetActive(true);
+        engineTrigger.SetActive(false);
+    }
+
+    IEnumerator StopLightning()
+    {
+        yield return new WaitForSeconds(0.04f);
+        Eclair.SetActive(true);
+
+
+        yield return new WaitForSeconds(0.05f);
+        Eclair.SetActive(false);
+
+        yield return new WaitForSeconds(0.012f);
+        Eclair.SetActive(true);
+
+        yield return new WaitForSeconds(0.013f);
+        Eclair.SetActive(false);
+
+        yield return new WaitForSeconds(0.024f);
+        Eclair.SetActive(true);
+
+        yield return new WaitForSeconds(0.025f);
+        Eclair.SetActive(false);
+    }
+
+    IEnumerator AfterLightningActivate()
+    {
+        yield return new WaitForSeconds(1);
+        AudioManagerScript.clip = sceneAudio.BlackOut;
+        AudioManagerScript.audioPlane.volume = 1;
+        AudioManagerScript.PlayAudio();
+        normalLights.SetActive(false);
+        lightsOut.SetActive(true);
+        powerOutUI.SetActive(true);
+        unplugged.SetActive(true);
+        altitude.SetActive(false);
+        engineTrigger.SetActive(true);
     }
 
     void Turbulences()
     {
-        sceneAudio.clip = sceneAudio.MainAlarm;
-        sceneAudio.PlayAudio();
+        AudioManagerScript.clip = sceneAudio.MainAlarm;
+        AudioManagerScript.audioPlane.volume = 0.2f;
+        AudioManagerScript.PlayAudio();
         Shake.SetActive(true);
         Thunder.SetActive(false);
         planeStickScript.shakingEvent = true;
@@ -100,6 +165,7 @@ public class EventManagerScript : MonoBehaviour
         planeStickScript.shakingEvent = false;
         camShake.SetBool("Shake", false);
         Shake.SetActive(false);
+        specialTask = false;
     }
 
     IEnumerator WaitForMission()
@@ -129,8 +195,8 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyFire && !alreadyFuel)
         {
-            sceneAudio.clip = sceneAudio.MainAlarm;
-            sceneAudio.PlayAudio();
+            AudioManagerScript.clip = sceneAudio.MainAlarm;
+            AudioManagerScript.PlayAudio();
         }
 
         else
@@ -143,8 +209,8 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyFuel && !alreadyFire)
         {
-            sceneAudio.clip = sceneAudio.MainAlarm;
-            sceneAudio.PlayAudio();
+            AudioManagerScript.clip = sceneAudio.MainAlarm;
+            AudioManagerScript.PlayAudio();
         }
 
         else

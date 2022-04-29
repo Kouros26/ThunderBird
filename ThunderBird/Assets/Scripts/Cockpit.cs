@@ -12,6 +12,8 @@ public class Cockpit : MonoBehaviour
 
     Animator playerAnim;
 
+    public AudioManagerScript sceneAudio;
+
     private void Start()
     {
         //eventScript.CockpitMission();      
@@ -23,6 +25,9 @@ public class Cockpit : MonoBehaviour
         {
             //skillCheckScript.SkillCheckStart();
             EventScript.isOccupied = true;
+            AudioManagerScript.clip = sceneAudio.FastenSeatBell;
+            AudioManagerScript.audioPlane.volume = 0.65f;
+            AudioManagerScript.PlayAudio();
             player = other.GetComponent<Transform>();
             player.transform.position = pilot.transform.position;
             player.transform.LookAt(pilotView);

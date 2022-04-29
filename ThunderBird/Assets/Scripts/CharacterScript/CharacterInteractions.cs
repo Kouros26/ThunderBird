@@ -8,6 +8,7 @@ public class CharacterInteractions : MonoBehaviour
     public static bool interacting;
     [SerializeField] private bool interactible = HandHitbox.interactible;
     [SerializeField] private rumble rumble;
+    private bool PlayerOne, PlayerTwo;
 
     [Header ("Dragon")]
    // ParticleSystem particles;
@@ -27,6 +28,7 @@ public class CharacterInteractions : MonoBehaviour
 
     public AudioManagerScript sceneAudio; 
     public CaressTheDragon caressTheDragonScript;
+    public GameObject engineTriggers;
 
     // Start is called before the first frame update
     void Start()
@@ -64,9 +66,11 @@ public class CharacterInteractions : MonoBehaviour
 
     public void ResetEngine(InputAction.CallbackContext context)
     {
-        if (Engine1 && Engine2)
+        bool temp = context.performed;
+
+        if (temp & Engine1)
         {
-            print("resetengine Bordelcamarche");
+            
         }
     }
 
@@ -103,8 +107,8 @@ public class CharacterInteractions : MonoBehaviour
             {
                 item.GetComponent<Rigidbody>().useGravity = false;
                 follow = true;
-                sceneAudio.clip = sceneAudio.Grab;
-                sceneAudio.PlayAudio();
+                AudioManagerScript.clip = sceneAudio.Grab;
+                AudioManagerScript.PlayAudio();
                 hasObject = true;
             }
         }

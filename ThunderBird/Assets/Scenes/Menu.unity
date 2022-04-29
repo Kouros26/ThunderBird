@@ -2388,7 +2388,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 81bd7a5fb0b70d441818c435cedb234e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2555,7 +2555,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   airplaneAmbient: {fileID: 0}
   thunderStorm: {fileID: 0}
-  death: {fileID: 0}
   footSteps: {fileID: 0}
   grab: {fileID: 0}
   airplaneAlarmGeneral: {fileID: 0}
@@ -2563,20 +2562,16 @@ MonoBehaviour:
   airplaneTurbulence: {fileID: 0}
   fastenSeatBelt: {fileID: 0}
   blackout: {fileID: 0}
-  depressurization: {fileID: 0}
-  equipMask: {fileID: 0}
   doorClose: {fileID: 0}
   doorOpen: {fileID: 0}
   dragonContent: {fileID: 0}
   dragonNotContent: {fileID: 0}
   essenceFilling: {fileID: 0}
   fireSoundEffect: {fileID: 0}
-  radioNoise: {fileID: 0}
-  radioTalking: {fileID: 0}
   leverSwitch: {fileID: 0}
   thunderClap: {fileID: 0}
-  audioPlane: {fileID: 0}
-  clip: {fileID: 0}
+  audioEvent: {fileID: 0}
+  clipEvent: {fileID: 0}
 --- !u!1 &2084940740
 GameObject:
   m_ObjectHideFlags: 0

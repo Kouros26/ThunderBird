@@ -10,7 +10,8 @@ public class ResetEngine : MonoBehaviour
 
     private List<bool> PlayersOnEngine = new List<bool>();
 
-    public static bool CanResetEngine;
+    public bool CanResetEngine;
+    public EventManagerScript eventManagerScript;
 
 
     // Start is called before the first frame update
@@ -33,7 +34,7 @@ public class ResetEngine : MonoBehaviour
         if (PlayerOne && PlayerTwo && OnEngine)
         {
             Debug.Log("Can Reset Engine");
-            CanResetEngine = true;
+            eventManagerScript.CheckForThunderFinish();
         }
 
     }
@@ -42,11 +43,15 @@ public class ResetEngine : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            print("player here");
             PlayersOnEngine.Add(true);
 
             if (PlayersOnEngine[0] == true && PlayersOnEngine[1] == true)
                 OnEngine = true;
             Debug.Log(PlayersOnEngine[0] + "," + PlayersOnEngine[1]);
+            Debug.Log(PlayerOne);
+            Debug.Log(PlayerTwo);
+            Debug.Log(OnEngine);
 
         }
     }

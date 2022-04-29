@@ -35,7 +35,7 @@ public class ButtonMash : MonoBehaviour
             _text.text = "SMASH X !";
         }
 
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if (mash <= 0 && timer > 2)
         {
             PlaneStick.Punishment();

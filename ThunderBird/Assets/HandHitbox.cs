@@ -61,7 +61,7 @@ public class HandHitbox : MonoBehaviour
                 break;
 
             case "Engine1":
-                Engine1 = true;
+                OnDoor = true;
                 break;
 
             case "Engine2":
@@ -107,7 +107,7 @@ public class HandHitbox : MonoBehaviour
                 break;
 
             case "Engine1":
-                Engine1 = false;
+                OnDoor = false;
                 break;
 
             case "Engine2":
