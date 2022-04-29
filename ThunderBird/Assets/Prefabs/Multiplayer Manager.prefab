@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7897986814121927823}
   - component: {fileID: 7897986814121927820}
   - component: {fileID: 1383350240}
+  - component: {fileID: 8920206799677897269}
   m_Layer: 0
   m_Name: Multiplayer Manager
   m_TagString: Untagged
@@ -51,9 +52,9 @@ MonoBehaviour:
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1383350240}
-        m_TargetAssemblyTypeName: Spawning, Assembly-CSharp
-        m_MethodName: OnPLayerJoined
+      - m_Target: {fileID: 8920206799677897269}
+        m_TargetAssemblyTypeName: PlayerJoin, Assembly-CSharp
+        m_MethodName: SwitchNextSpawnCharacters
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -105,3 +106,22 @@ MonoBehaviour:
   players:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &8920206799677897269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7897986814121927821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833ca9bee56949e4ea18be746501b0b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 5610442977176724045, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+  - {fileID: 1000395768221211568, guid: 15e6a1253f46e27429afd0ee3484f226, type: 3}
+  spawnLocations: []
+  players:
+  - {fileID: 5610442977176724045, guid: f72011d2ade131d4b9c03638dadaa4a0, type: 3}
+  - {fileID: 1000395768221211568, guid: 15e6a1253f46e27429afd0ee3484f226, type: 3}

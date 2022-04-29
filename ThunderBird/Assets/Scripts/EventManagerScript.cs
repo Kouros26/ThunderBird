@@ -242,7 +242,7 @@ public class EventManagerScript : MonoBehaviour
         {
             task = false;
             alreadyPet = true;
-            AudioManagerScript.clip = sceneAudio.DragonContent;
+            AudioManagerScript.clip = sceneAudio.DragonNotContent;
             AudioManagerScript.PlayAudio();
             dragonUI.SetActive(true);
             dragonHitbox.GetComponent<BoxCollider>().enabled = true;
@@ -275,7 +275,7 @@ public class EventManagerScript : MonoBehaviour
     {
         alreadyPet = false;
         dragonUI.SetActive(false);
-        AudioManagerScript.clip = sceneAudio.DragonNotContent;
+        AudioManagerScript.clip = sceneAudio.DragonContent;
         AudioManagerScript.PlayAudio();
         dragonHitbox.GetComponent<BoxCollider>().enabled = false;
     }
@@ -298,8 +298,6 @@ public class EventManagerScript : MonoBehaviour
 
     public void Fill()
     {
-        print(CharacterInteractions.fillFuel);
-        print(CharacterInteractions.fillWater);
         if (CharacterInteractions.fillFuel)
         {
             fuel.SetActive(true);

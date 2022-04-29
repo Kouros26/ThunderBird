@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TankMaintenance : MonoBehaviour
 {
@@ -23,8 +24,7 @@ public class TankMaintenance : MonoBehaviour
                 }
                 else
                 {
-                    return;
-                    //DEATH
+                    SceneManager.LoadScene(2);
                 }
             }
             if(eventManagerScript.fuelRequired)
@@ -38,8 +38,7 @@ public class TankMaintenance : MonoBehaviour
                 }
                 else
                 {
-                    return;
-                    //DEATH
+                    SceneManager.LoadScene(2);
                 }
             }
         }
