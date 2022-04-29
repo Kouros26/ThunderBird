@@ -8,6 +8,7 @@ public class CaressTheDragon : MonoBehaviour
     [SerializeField] private ParticleSystem heart;
     public CharacterMovement characterMovementScript;
     public EventManagerScript eventManagerScript;
+    Animator animDebug;
     //bool dragon = false;
     public bool love = false;
 
@@ -25,6 +26,7 @@ public class CaressTheDragon : MonoBehaviour
         if (other.tag == "Player")
         {
             characterMovementScript = other.GetComponent<CharacterMovement>();
+            animDebug = other.GetComponent<Animator>();
         }
     }
     void FixedUpdate()
@@ -32,6 +34,7 @@ public class CaressTheDragon : MonoBehaviour
     {
         if (love && !heart.isEmitting)
         {
+            animDebug.SetBool("Move", false);
             characterMovementScript.paused = true;
             heart.Play();
             StartCoroutine(DragonInteraction());
@@ -54,12 +57,11 @@ public class CaressTheDragon : MonoBehaviour
     //    characterMovementScript.paused = false;
     //}
 
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.tag == "Player")
-    //    {
-    //        heart.Stop(includeChildren);
-    //    }
-    //}
-
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            characterMovementScript = null;
+        }
+    }
 }

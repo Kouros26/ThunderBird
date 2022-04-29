@@ -57,7 +57,7 @@ public class EventManagerScript : MonoBehaviour
         //DEBUG MISSION
         if(Input.GetKeyDown(KeyCode.Y))
         {
-            PetTheDragon();
+            Turbulences();
         }
     }
 
