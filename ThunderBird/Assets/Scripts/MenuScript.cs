@@ -26,4 +26,9 @@ public class MenuScript : MonoBehaviour
         Application.Quit();
     }
 
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 }
