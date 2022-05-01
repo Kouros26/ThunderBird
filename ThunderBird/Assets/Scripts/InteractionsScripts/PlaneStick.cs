@@ -18,7 +18,7 @@ public class PlaneStick : MonoBehaviour
 
     void Start()
     {
-
+        Altitude = 33000;
     }
 
     // Update is called once per frame
@@ -59,6 +59,18 @@ public class PlaneStick : MonoBehaviour
                     Altitude = AltitudeMax;
 
                 return;
+            }
+            else
+            {
+                y = 0;
+                Altitude -= x * x * Time.deltaTime;
+                Altitude = Mathf.RoundToInt(Altitude);
+
+                if (Altitude < 0)
+                {
+                    Altitude = 0;
+                    SceneManager.LoadScene(2);
+                }
             }
         }
 

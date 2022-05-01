@@ -143,6 +143,8 @@ public class CharacterInteractions : MonoBehaviour
         if (hasObject && fuelpumps && !bucketFilled)
         {
             Debug.Log("L'eau c'est la vie meme dans un sceau");
+            AudioManagerScript.clip = sceneAudio.EssenceFilling;
+            AudioManagerScript.PlayAudio();
             hasObjectWater = true;
             bucketFilled = true;
             fillWater = true;
@@ -157,6 +159,8 @@ public class CharacterInteractions : MonoBehaviour
         {
             Debug.Log("Du fuel dans le malibu et dans le sceau");
             //hasObjectWater = false;
+            AudioManagerScript.clip = sceneAudio.EssenceFilling;
+            AudioManagerScript.PlayAudio();
             hasObjectFuel = true;
             bucketFilled = true;
             fillFuel = true;

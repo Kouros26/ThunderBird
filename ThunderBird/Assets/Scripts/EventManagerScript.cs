@@ -77,14 +77,19 @@ public class EventManagerScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Y))
         {
             //Thunderstorm();
-            //Turbulences();
-            PetTheDragon();
+            Turbulences();
+            //PetTheDragon();
         }
+
+        //if(!alreadyDoor)
+        //{
+        //    DoorClose();
+        //}
 
         if(startedTime)
         {
             timer += Time.deltaTime;
-            if(timer > 15)
+            if(timer > 12)
             {
                 PlaneStick.Punishment();
                 startedTime = false;
@@ -95,7 +100,7 @@ public class EventManagerScript : MonoBehaviour
 
     IEnumerator WaitForSpecialMission()
     {
-        int random = Random.Range(60, 121);
+        int random = Random.Range(20, 40);
         yield return new WaitForSeconds(random);
         int eventToPerform = Random.Range(1, 3);
         if(eventToPerform == 1 && !isEventThunderOn)
@@ -178,7 +183,7 @@ public class EventManagerScript : MonoBehaviour
         AudioManagerScript.clip = sceneAudio.MainAlarm;
         AudioManagerScript.PlayAudio();
         Shake.SetActive(true);
-        Thunder.SetActive(false);
+        //Thunder.SetActive(false);
         planeStickScript.shakingEvent = true;
         camShake.SetBool("Shake", true);
         StartCoroutine(ShakingEvent());
@@ -196,9 +201,10 @@ public class EventManagerScript : MonoBehaviour
 
     IEnumerator WaitForMission()
     {
-        int random = Random.Range(10, 26);
+        int random = Random.Range(8, 15);
         yield return new WaitForSeconds(random);
         int mission = Random.Range(1, 5);
+        int secondMission = Random.Range(1, 5);
         if(mission == 1)
         {
             Fire();
@@ -212,6 +218,22 @@ public class EventManagerScript : MonoBehaviour
             PetTheDragon();
         }
         if (mission ==4)
+        {
+            DoorClose();
+        }
+        if (secondMission == 1)
+        {
+            Fire();
+        }
+        if (secondMission == 2)
+        {
+            Fuel();
+        }
+        if (secondMission == 3)
+        {
+            PetTheDragon();
+        }
+        if (secondMission == 4)
         {
             DoorClose();
         }
@@ -333,7 +355,7 @@ public class EventManagerScript : MonoBehaviour
         {
             fuel.SetActive(true);
         }
-        if(CharacterInteractions.fillWater)
+        else if(CharacterInteractions.fillWater)
         {
             water.SetActive(true);
         }
