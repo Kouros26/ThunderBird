@@ -48,6 +48,8 @@ public class EventManagerScript : MonoBehaviour
     public int requirement = 0;
     public GameObject water;
     public GameObject fuel;
+    public GameObject engine;
+    Animator engineAnimation;
     bool startedTime;
     float timer;
 
@@ -57,6 +59,7 @@ public class EventManagerScript : MonoBehaviour
     {
         camShake = cam.GetComponent<Animator>();
         //dragonHitbox = GameObject.Find("plaques_chariot");
+        engineAnimation = engine.GetComponent<Animator>();
     }
 
     void Update()
@@ -71,14 +74,16 @@ public class EventManagerScript : MonoBehaviour
         {
             task = true;
             StartCoroutine(WaitForMission());
+            StartCoroutine(WaitForSecondMission());
         }
 
         //DEBUG MISSION
         if(Input.GetKeyDown(KeyCode.Y))
         {
-            //Thunderstorm();
-            Turbulences();
+            Thunderstorm();
+            //Turbulences();
             //PetTheDragon();
+            //Fire();
         }
 
         //if(!alreadyDoor)
@@ -127,8 +132,8 @@ public class EventManagerScript : MonoBehaviour
     {
         AudioManagerScript.clip = sceneAudio.Switch;
         AudioManagerScript.PlayAudio();
-        startedTime = false;
-        timer = 0;
+        //startedTime = false;
+        //timer = 0;
         isEventThunderOn = false;
         Thunder.SetActive(false);
         normalLights.SetActive(true);
@@ -172,7 +177,7 @@ public class EventManagerScript : MonoBehaviour
         unplugged.SetActive(true);
         altitude.SetActive(false);
         engineTrigger.SetActive(true);
-        startedTime = true;
+        //startedTime = true;
         //StartCoroutine(BlackoutTime());
 
     }
@@ -204,7 +209,6 @@ public class EventManagerScript : MonoBehaviour
         int random = Random.Range(8, 15);
         yield return new WaitForSeconds(random);
         int mission = Random.Range(1, 5);
-        int secondMission = Random.Range(1, 5);
         if(mission == 1)
         {
             Fire();
@@ -221,6 +225,13 @@ public class EventManagerScript : MonoBehaviour
         {
             DoorClose();
         }
+    }
+
+    IEnumerator WaitForSecondMission()
+    {
+        int random = Random.Range(8, 15);
+        yield return new WaitForSeconds(random);
+        int secondMission = Random.Range(1, 5);
         if (secondMission == 1)
         {
             Fire();
@@ -243,6 +254,7 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyFire && !alreadyFuel)
         {
+            engineAnimation.SetBool("Faulty", true);
             alreadyFire = true;
             task = false;
             AudioManagerScript.clip = sceneAudio.FireSoundEffect;
@@ -264,6 +276,7 @@ public class EventManagerScript : MonoBehaviour
     {
         if(!alreadyFuel && !alreadyFire)
         {
+            engineAnimation.SetBool("Faulty", true);
             alreadyFuel = true;
             task = false;
             AudioManagerScript.clip = sceneAudio.LowFuel;
@@ -330,6 +343,7 @@ public class EventManagerScript : MonoBehaviour
 
     public void FireExtinguished()
     {
+        engineAnimation.SetBool("Faulty", false);
         fireUI.SetActive(false);
         tankTrigger.SetActive(false);
         waterRequired = false;
@@ -341,6 +355,7 @@ public class EventManagerScript : MonoBehaviour
 
     public void FuelReplenished()
     {
+        engineAnimation.SetBool("Faulty", false);
         fuelUI.SetActive(false);
         tankTrigger.SetActive(false);
         fuelRequired = false;
@@ -365,44 +380,4 @@ public class EventManagerScript : MonoBehaviour
             water.SetActive(false);
         }
     }
-
-    //IEnumerator FireTime()
-    //{
-    //    yield return new WaitForSeconds(15);
-    //    if(waterRequired == true)
-    //    {
-    //        PlaneStick.Punishment();
-    //        FireExtinguished();
-    //    }
-    //}
-
-    //IEnumerator FuelTime()
-    //{
-    //    yield return new WaitForSeconds(15);
-    //    if (fuelRequired == true)
-    //    {
-    //        PlaneStick.Punishment();
-    //        FuelReplenished();
-    //    }
-    //}
-
-    //IEnumerator DragonTime()
-    //{
-    //    yield return new WaitForSeconds(15);
-    //    if (alreadyPet == true)
-    //    {
-    //        PlaneStick.Punishment();
-    //        DragonFinished();
-    //    }
-    //}
-
-    //IEnumerator BlackoutTime()
-    //{
-    //    yield return new WaitForSeconds(10);
-    //    if (isEventThunderOn == true)
-    //    {
-    //        PlaneStick.Punishment();
-    //        CheckForThunderFinish();
-    //    }
-    //}
 }

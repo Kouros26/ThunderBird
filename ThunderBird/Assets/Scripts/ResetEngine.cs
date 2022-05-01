@@ -43,13 +43,11 @@ public class ResetEngine : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            print("player here");
             PlayersOnEngine.Add(true);
 
             if (PlayersOnEngine[0] == true && PlayersOnEngine[1] == true)
                 OnEngine = true;
             Debug.Log(PlayersOnEngine[0] + "," + PlayersOnEngine[1]);
-
         }
     }
 
@@ -60,7 +58,6 @@ public class ResetEngine : MonoBehaviour
             PlayersOnEngine.RemoveAt(PlayersOnEngine.Count - 1);
             OnEngine = false;
             Debug.Log(PlayersOnEngine[0] + "," + PlayersOnEngine[1]);
-
         }
     }
 
